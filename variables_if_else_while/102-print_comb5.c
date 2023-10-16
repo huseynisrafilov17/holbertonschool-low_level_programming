@@ -20,10 +20,6 @@ int main(void)
 			l = j + 1;
 			for (k = i; k < 58; k++)
 			{
-				if (j == 58)
-				{
-					k = k + 1;
-				}
 				for (; l < 58; l++)
 				{
 					putchar(i);
