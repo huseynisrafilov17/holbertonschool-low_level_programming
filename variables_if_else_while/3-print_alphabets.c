@@ -8,18 +8,15 @@
  */
 int main(void)
 {
-	int i = 97;
+	int i;
 
-	while (i < 123)
+	for (i = 97; i < 123; i++)
 	{
-		putchar((char)i);
-		i++;
+		putchar(i);
 	}
-	i = 65;
-	while (i < 91)
+	for (i = 65; i < 91; i++)
 	{
-		putchar((char)i);
-		i++;
+		putchar(i);
 	}
 	putchar('\n');
 	return (0);
