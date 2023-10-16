@@ -17,13 +17,14 @@ int main(void)
 	{
 		for (j = 48; j < 58; j++)
 		{
+			l = j + 1;
 			for (k = i; k < 58; k++)
 			{
 				if (j == 58)
 				{
 					k = k + 1;
 				}
-				for (l = j + 1; l < 58; l++)
+				for (; l < 58; l++)
 				{
 					putchar(i);
 					putchar(j);
