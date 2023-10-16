@@ -9,8 +9,14 @@
 int main(void)
 {
 	int i = 97;
-
-	while (i < 123)
+	
+	while (i<123)
+	{
+		putchar((char)i);
+		i++;
+	}
+	i = 65
+	while (i<91)
 	{
 		putchar((char)i);
 		i++;
