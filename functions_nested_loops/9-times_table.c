@@ -14,8 +14,8 @@ void times_table(void)
 			a = i * j;
 			while (a / 10 != 0)
 			{
-				b = a % 10;
-				_putchar(b);
+				r = a % 10;
+				_putchar(r);
 				a = a / 10;
 			}
 			_putchar(a);
