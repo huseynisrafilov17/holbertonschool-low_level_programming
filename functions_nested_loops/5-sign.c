@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - checks for lowercase character.
+ * print_sign -  prints the sign of a number.
  * @n:  int.
  * Return: void.
  */
