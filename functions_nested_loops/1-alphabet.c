@@ -1,4 +1,7 @@
 #include "main.h"
+/**
+ * Prints every character in alphabet
+ */
 void print_alphabet(void)
 {
 	int i;
