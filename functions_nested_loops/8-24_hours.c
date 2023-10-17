@@ -1,5 +1,9 @@
-#include <stdio.h>
-int main(void)
+#include <main.h>
+/*
+ * jack_bauer - prints every minute of the day.
+ * Return: void.
+ */
+void jack_bauer(void)
 {
 	int i = 0, j = 0, k = 0, m = 0;
 
@@ -15,15 +19,14 @@ int main(void)
 			{
 				for (m = 48; m < 58; m++)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(':');
-					putchar(k);
-					putchar(m);
-					putchar('\n');
+					_putchar(i);
+					_putchar(j);
+					_putchar(':');
+					_putchar(k);
+					_putchar(m);
+					_putchar('\n');
 				}
 			}
 		}
 	}
-	return (0);
 }
