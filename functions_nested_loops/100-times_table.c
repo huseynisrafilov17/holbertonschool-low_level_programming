@@ -1,9 +1,7 @@
 #include "main.h"
 /**
  * print_times_table - prints the n times table, starting with 0.
- * slice - slices number for putchar.
  * @n: int.
- * @a: int/
  * Return: void.
  */
 
@@ -42,6 +40,11 @@ void print_times_table(int n)
 		}
 	}
 }
+/**
+ * slice - slices number for putchar.
+ * @a: int.
+ * Return: void.
+ */
 
 void slice(int a)
 {
