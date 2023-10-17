@@ -13,31 +13,13 @@ void print_to_98(int n)
 	{
 		if (n > 98)
 		{
-			if (flag == 0)
-			{
-				printf("%d", n);
-				n--;
-				flag = 1;
-			}
-			else
-			{
-				printf(", %d", n);
-				n--;
-			}
+			printf("%d, ", n);
+			n--;
 		}
 		else if (n < 98)
 		{
-			if (flag == 0)
-			{
-				printf("%d", n);
-				n++;
-				flag = 1;
-			}
-			else
-			{
-				printf(", %d", n);
-				n++;
-			}
+			printf("%d, ", n);
+			n++;
 		}
 	}
 	printf("98");
