@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * print_times_table - prints the n times table, starting with 0.
+ * slice - slices number for putchar.
+ * @n: int.
+ * @a: int/
+ * Return: void.
+ */
 
 void print_times_table(int n)
 {
@@ -29,23 +36,28 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				if (a >= 100)
-				{
-					_putchar((a / 100) + '0');
-					_putchar(((a % 100) / 10) + '0');
-					_putchar((a % 10) + '0');
-				}
-				else if (a >= 10)
-				{
-					_putchar((a / 10) + '0');
-					_putchar((a % 10) + '0');
-				}
-				else
-				{
-					_putchar(a + '0');
-				}
+				slice(a);
 			}
 			_putchar('\n');
 		}
+	}
+}
+
+void slice(int a)
+{
+	if (a >= 100)
+	{
+		_putchar((a / 100) + '0');
+		_putchar(((a % 100) / 10) + '0');
+		_putchar((a % 10) + '0');
+	}
+	else if (a >= 10)
+	{
+		_putchar((a / 10) + '0');
+		_putchar((a % 10) + '0');
+	}
+	else
+	{
+	_putchar(a + '0');
 	}
 }
