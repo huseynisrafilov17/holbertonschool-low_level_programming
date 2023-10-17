@@ -2,17 +2,16 @@
 /**
  * print_last_digit - checks for lowercase character.
  * @a:  int.
- * Return: void.
+ * Return: int.
  */
 int print_last_digit(int a)
 {
-	int b;
+	int b = a % 10;
 
-	if (a < 0)
+	if (b < 0)
 	{
-		a = -1 * a;
+		b = -1 * b;
 	}
-	b = a % 10;
 	_putchar(b + '0');
 	return (b);
 }
