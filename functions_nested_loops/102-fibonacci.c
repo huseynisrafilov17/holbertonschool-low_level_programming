@@ -6,21 +6,22 @@
  */
 int main(void)
 {
-	long a, b, s;
-	int c;
+	long a, b, s, d;
 
 	a = 1;
 	b = 2;
-	c = 3;
-	printf("%ld, %ld", a, b);
-	while (c < 51)
+	s = 0;
+	d = 2;
+	while (s < 4000000)
 	{
 		s = a + b;
 		a = b;
 		b = s;
-		c++;
-		printf(", %ld", s);
+		if (s % 2 == 0)
+		{
+			d = d + s;
+		}
 	}
-	printf("\n");
+	printf("%ld\n", d);
 	return (0);
 }
