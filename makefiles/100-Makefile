@@ -5,7 +5,7 @@ NAME=school
 CFLAGS = -Wall -Werror -Wextra -pedantic 
 
 all: $(SRC:.c=.o)
-	ifeq [ -e m.h ] ; then \
+	if [ -e m.h ] ; then \
 		echo "Error"; false; \
 	fi;
 	$(CC) ${CFLAGS} $(OBJ) -o $(NAME)
