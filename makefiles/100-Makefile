@@ -4,12 +4,9 @@ OBJ=$(SRC:.c=.o)
 NAME=school
 CFLAGS = -Wall -Werror -Wextra -pedantic 
 
-all: $(SRC:.c=.o)
-	if [ -e m.h ] ; then \
-		echo "Error"; false; \
-	fi;
+all: m.h $(SRC:.c=.o)
 	$(CC) ${CFLAGS} $(OBJ) -o $(NAME)
-
+.PHONY: clean oclean fclean re
 clean:
 	$(RM) *~ $(NAME)
 
