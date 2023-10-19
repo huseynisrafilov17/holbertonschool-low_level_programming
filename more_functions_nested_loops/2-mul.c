@@ -1,5 +1,5 @@
 /**
- *_isupper - multiplies two integers.
+ * mul - multiplies two integers.
  * @a: int.
  * @b: int.
  * Return: 0 or 1.
