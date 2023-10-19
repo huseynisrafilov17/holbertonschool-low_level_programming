@@ -1,5 +1,5 @@
 /**
- *_isdigit - checks for a digit.
+ * _isdigit - checks for a digit.
  * @c: int.
  * Return: 0 or 1.
  */

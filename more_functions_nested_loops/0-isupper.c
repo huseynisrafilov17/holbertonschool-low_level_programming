@@ -1,5 +1,5 @@
 /**
- *_isupper - checks for uppercase character.
+ * _isupper - checks for uppercase character.
  * @c: int.
  * Return: 0 or 1.
  */
