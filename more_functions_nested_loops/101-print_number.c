@@ -18,10 +18,7 @@ void print_number(int n)
 	{
 		i = i * 10;
 	}
-	if (i < INT_MAX/10)
-		continue;
-	else
-		i = i / 10;
+	i = i / 10;
 	for (; i != 1; i /= 10)
 	{
 		_putchar((n / i) + '0');
