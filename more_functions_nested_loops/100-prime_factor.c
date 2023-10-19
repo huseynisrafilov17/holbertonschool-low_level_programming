@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long long int a, max, remainder, i;
+	unsigned long int a, max, remainder, i;
 	
 	a = 612852475143;
 	max = 0;
@@ -25,6 +25,6 @@ int main(void)
 			break;
 		}
 	}
-	printf("%d\n", max);
+	printf("%lu\n", max);
 	return (0);
 }
