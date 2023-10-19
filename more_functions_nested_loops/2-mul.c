@@ -2,7 +2,7 @@
  * mul - multiplies two integers.
  * @a: int.
  * @b: int.
- * Return: 0 or 1.
+ * Return: result.
  */
 int mul(int a, int b)
 {
