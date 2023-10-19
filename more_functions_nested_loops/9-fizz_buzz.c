@@ -24,7 +24,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d");
+			printf("%d", i);
 		}
 		if (i < 100)
 		{
