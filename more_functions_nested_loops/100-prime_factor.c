@@ -7,7 +7,7 @@
 int main(void)
 {
 	unsigned long int a, max, remainder, i;
-	
+
 	a = 612852475143;
 	max = 0;
 	for (i = 1; i <= 612852475143; i++)
@@ -15,6 +15,7 @@ int main(void)
 		if (a % i == 0)
 		{
 			remainder = a / i;
+			a = remainder;
 			if (max < i)
 			{
 				max = i;
