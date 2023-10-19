@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_diagonal -  draws a diagonal line in the terminal.
- * @n: int.
+ * print_square - prints a square.
+ * @size: int.
  * Return: void.
  */
 void print_square(int size)
@@ -10,7 +10,7 @@ void print_square(int size)
 
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j <= i; j++)
+		for (j = 0; j < size; j++)
 		{
 			_putchar('#');
 		}
