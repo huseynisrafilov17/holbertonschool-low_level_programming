@@ -70,7 +70,7 @@ int main(void)
 			ifs(a, b, c);
 			c++;
 		}
+	}
 	printf("\n");
 	return (0);
-	}
 }
