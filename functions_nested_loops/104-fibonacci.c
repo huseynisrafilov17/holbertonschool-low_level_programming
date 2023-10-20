@@ -8,9 +8,8 @@
 int main(void)
 {
 	uint64_t a, b, s;
-	uint64_t a_half1, b_half1, a_half2, b_half2, s_half1, s_half2, divider;
+	uint64_t a_half1, b_half1, a_half2, b_half2, s_half1, s_half2;
 	int c;
-	divider = 10000000000;
 	a = 1;
 	b = 2;
 	c = 3;
