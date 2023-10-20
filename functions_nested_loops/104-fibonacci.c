@@ -64,15 +64,11 @@ int main(void)
 		{
 			s_half1 = a_half1 + b_half1;
 			s_half2 = a_half2 + b_half2;
-			if (s_half2 > 99999999999)
+			if (s_half2 > 9999999999)
 			{
-				s_half1 = s_half1 + (s_half2 / 100000000000);
-				s_half2 = s_half2 - (s_half2 / 100000000000) * 100000000000;
+				s_half1 = s_half1 + (s_half2 / 10000000000);
+				s_half2 = s_half2 - (s_half2 / 10000000000) * 10000000000;
 			}
-			a_half1 = b_half1;
-			a_half2 = b_half2;
-			b_half1 = a_half1;
-			b_half2 = a_half2;
 			printf (", %"PRIu64"%"PRIu64, s_half1, s_half2);
 			c++;
 		}
