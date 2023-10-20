@@ -67,7 +67,7 @@ int main(void)
 		}
 		else
 		{
-			ifs(a, b, s, c);
+			ifs(a, b, c);
 			c++;
 		}
 	printf("\n");
