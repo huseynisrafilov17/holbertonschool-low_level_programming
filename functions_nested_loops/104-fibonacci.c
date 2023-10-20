@@ -10,10 +10,13 @@ void ifs(uint64_t a, uint64_t b, int c)
 {
 	uint64_t a_half1, b_half1, a_half2, b_half2, s_half1, s_half2;
 
-	a_half1 = a / 10000000000;
-	a_half2 = a % 10000000000;
-	b_half1 = b / 10000000000;
-	b_half2 = b % 10000000000;
+	if (c == 93)
+	{
+		a_half1 = a / 10000000000;
+		a_half2 = a % 10000000000;
+		b_half1 = b / 10000000000;
+		b_half2 = b % 10000000000;
+	}
 	if (c >= 93 && c <= 97)
 	{
 		s_half1 = a_half1 + b_half1;
