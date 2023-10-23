@@ -9,8 +9,9 @@
 char *_strcpy(char *dest, char *src)
 {
 	int length;
+
 	length = strlen(src);
-	while (length > 0)
+	while (length >= 0)
 	{
 		*(dest + length) = *(src + length);
 		length--;
