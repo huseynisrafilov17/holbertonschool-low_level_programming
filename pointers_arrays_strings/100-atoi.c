@@ -8,10 +8,10 @@ int _atoi(char *s)
 {
 	int sign, flag;
 	unsigned int number;
+
 	sign = 1;
 	number = 0;
 	flag = 1;
-
 	while (*s != '\0')
 	{
 		if (*s > 47 && *s < 58)
