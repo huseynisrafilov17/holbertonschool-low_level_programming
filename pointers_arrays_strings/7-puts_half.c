@@ -4,7 +4,7 @@ void puts_half(char *str)
 {
 	int a;
 
-	a = strlen(*str);
+	a = strlen(str);
 	if (a % 2 == 0)
 	{
 		a = a / 2;
