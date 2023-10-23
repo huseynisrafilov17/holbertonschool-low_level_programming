@@ -13,6 +13,7 @@ char *_strcpy(char *dest, char *src)
 	while (length > 0)
 	{
 		*(dest + length) = *(src + length);
+		length--;
 	}
 	return (dest);
 }
