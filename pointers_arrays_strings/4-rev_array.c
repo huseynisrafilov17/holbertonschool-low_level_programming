@@ -5,20 +5,15 @@
  */
 void reverse_array(int *a, int n)
 {
-	int b[50];
-	int i;
-	i = 0;
+	int temp, i, j;
 
-	while (i < n)
-	{
-		*(a + i) = b[i];
-		i++;
-	}
-	i--;
+	i = n - 1;
+	j = 0;
 	while (i >= 0)
 	{
-		*a = b[i];
-		i--;
-		a++;
+		temp = *a;
+		*(a + j) = *(a + i);
+		j++;
+		i--
 	}
 }
