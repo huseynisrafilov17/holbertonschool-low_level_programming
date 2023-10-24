@@ -6,6 +6,7 @@
 void reverse_array(int *a, int n)
 {
 	int temp, i, j, half_n;
+
 	if (n % 2 == 0)
 	{
 		half_n = n / 2;
