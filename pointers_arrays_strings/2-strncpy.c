@@ -8,9 +8,10 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int j;
-	j = 0;
+	int j, i;
 
+	j = 0;
+	i = 0;
 	while (j < n)
 	{
 		if (*(src + j) != '\0')
@@ -20,8 +21,8 @@ char *_strncpy(char *dest, char *src, int n)
 		}
 		else
 		{
-			*(dest + j) = 0;
-			j++;
+			*(dest + j + i) = 0;
+			i++;
 		}
 	}
 	return (dest);
