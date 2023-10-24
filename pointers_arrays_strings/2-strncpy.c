@@ -9,7 +9,11 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	if (*(src + j) == '\0')
 	{
-		return (dest);
+		while (*(dest + j) != '\0')
+		{
+			*(dest + j) = NULL;
+			j++;
+		}
 	}
 	return (dest);
 }
