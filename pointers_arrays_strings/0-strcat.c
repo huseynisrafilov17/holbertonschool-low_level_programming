@@ -12,10 +12,10 @@ char *_strcat(char *dest, char *src)
 	{
 		dest++;
 	}
-	while (*(src + c - 1) != '\0')
+	while (*(src - 1) != '\0')
 	{
-		*(dest + c) = *(src + c);
-		c++;
+		*dest = *src;
+		src++;
 	}
 	return (dest);
 }
