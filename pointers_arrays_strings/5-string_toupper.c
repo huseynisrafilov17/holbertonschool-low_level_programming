@@ -5,13 +5,16 @@
  */
 char *string_toupper(char *zor)
 {
-	int i = 0;
+	int i;
+	char c;
+	i = 0
 
 	while (*(zor + i) != '\0')
 	{
+		c = *(zor + i);
 		if (*(zor + i) >= 97 && *(zor + i) <= 122)
 		{
-			*(zor + i) = (char)(*zor - 32);
+			*(zor + i) = c - 32;
 			i++;
 		}
 		else
