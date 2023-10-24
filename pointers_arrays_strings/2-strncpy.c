@@ -20,7 +20,7 @@ char *_strncpy(char *dest, char *src, int n)
 		}
 		else
 		{
-			*(dest + j) = '\0';
+			*(dest + j) = 0;
 			j++;
 		}
 	}
