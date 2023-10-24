@@ -3,11 +3,10 @@
  * _strcat - concatenates two strings.
  * @dest: destination.
  * @src: source.
+ * Return: char pointer.
  */
 char *_strcat(char *dest, char *src)
 {
-	int c = 0;
-
 	while (*dest != '\0')
 	{
 		dest++;
