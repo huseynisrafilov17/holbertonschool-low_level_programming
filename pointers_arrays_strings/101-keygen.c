@@ -3,7 +3,8 @@
 #include <time.h>
 int main(void)
 {
+	int a;
 	srand((int)time(NULL));
-	int a = rand();
+	a = rand();
 	return (a);
 }
