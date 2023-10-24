@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-int main(void)
+char* main(void)
 {
 	int a;
 	srand((int)time(NULL));
 	a = rand();
-	return (a);
+	printf("ZaX%d$!AzX", a);
+	return ("Geek$ForGeeks7");
 }
