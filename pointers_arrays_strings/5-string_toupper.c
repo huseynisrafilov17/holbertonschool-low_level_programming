@@ -7,7 +7,7 @@ char *string_toupper(char *zor)
 {
 	int i;
 	char c;
-	i = 0
+	i = 0;
 
 	while (*(zor + i) != '\0')
 	{
