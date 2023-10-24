@@ -2,7 +2,8 @@
  * _strncat - concatenates two strings.
  * @dest: destination string.
  * @src: source string.
- * @n: byte size.
+ * @n: byte size
+ * Return: dest.
  */
 char *_strncat(char *dest, char *src, int n)
 {
