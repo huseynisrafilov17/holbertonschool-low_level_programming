@@ -11,7 +11,7 @@ char *string_toupper(char *zor)
 	{
 		if (*(zor + i) >= 97 && *(zor + i) <= 122)
 		{
-			*(zor + i) = (char)((int)*zor - 32);
+			*(zor + i) = (char)(*zor - 32);
 			i++;
 		}
 		else
