@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * _strncpy - copies a string.
  * @dest: char.
