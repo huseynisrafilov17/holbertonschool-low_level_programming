@@ -5,7 +5,7 @@
  */
 void reverse_array(int *a, int n)
 {
-	int b[n];
+	int b[50];
 	int i;
 	i = 0;
 
@@ -14,6 +14,7 @@ void reverse_array(int *a, int n)
 		*(a + i) = b[i];
 		i++;
 	}
+	i--;
 	while (i >= 0)
 	{
 		*a = b[i];
