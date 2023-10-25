@@ -29,6 +29,7 @@ char *cap_string(char *zor)
 		{
 			*(zor + i) = c - 32;
 		}
+		i++;
 	}
 	return (zor);
 }
