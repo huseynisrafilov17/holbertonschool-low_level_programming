@@ -1,3 +1,4 @@
+#include <string.h>
 /**
  * cap_string - capitalizes all words of a string.
  * @zor: string.
@@ -5,11 +6,12 @@
  */
 char *cap_string(char *zor)
 {
-	int i;
+	int i, n;
 	char c, p;
 
+	n = strlen(zor);
 	i = 0;
-	while (*(zor + i) != '\0')
+	while (i < n)
 	{
 		c = *(zor + i);
 		p = *(zor + i - 1);
