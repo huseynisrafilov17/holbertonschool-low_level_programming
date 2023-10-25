@@ -15,19 +15,27 @@ char *cap_string(char *zor)
 	{
 		c = *(zor + i);
 		p = *(zor + i - 1);
-		if (i == 0 && *(zor + i) >= 97 && *(zor + i) <= 122)
+		if (i == 0 && c >= 97 && c <= 122)
 		{
 			*(zor + i) = c - 32;
 		}
-		else if (p == ' ' || p == '\t' || p == '\n' || p == ',' || p == ';')
+		else if ((p == ' ' || p == '\t' || p == '\n') && c >= 97 && c <= 122)
 		{
 			*(zor + i) = c - 32;
 		}
-		else if (p == '!' || p == '?' || p == '"' || p == '(' || p == ')')
+		else if (p == '!' || p == '?' || p == '"')
 		{
 			*(zor + i) = c - 32;
 		}
 		else if (p == '.' || p == '{' || p == '}')
+		{
+			*(zor + i) = c - 32;
+		}
+		else if (p == ',' || p == '(' || p == ')')
+                {
+                        *(zor + i) = c - 32;
+                }
+		else if (p == ';')
 		{
 			*(zor + i) = c - 32;
 		}
