@@ -23,19 +23,19 @@ char *cap_string(char *zor)
 		{
 			*(zor + i) = c - 32;
 		}
-		else if (p == '!' || p == '?' || p == '"')
+		else if (p == '!' || p == '?' || p == '"' && c >= 97 && c <= 122)
 		{
 			*(zor + i) = c - 32;
 		}
-		else if (p == '.' || p == '{' || p == '}')
+		else if (p == '.' || p == '{' || p == '}' && c >= 97 && c <= 122)
 		{
 			*(zor + i) = c - 32;
 		}
-		else if (p == ',' || p == '(' || p == ')')
+		else if (p == ',' || p == '(' || p == ')' && c >= 97 && c <= 122)
                 {
                         *(zor + i) = c - 32;
                 }
-		else if (p == ';')
+		else if (p == ';' && c >= 97 && c <= 122)
 		{
 			*(zor + i) = c - 32;
 		}
