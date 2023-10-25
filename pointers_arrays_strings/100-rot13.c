@@ -16,6 +16,7 @@ char *rot13(char *zor)
 			if ((c >= 65 && c <= 77) || (c >= 97 && c <= 109))
 			{
 				*(zor + i) = c + 26;
+				c = *(zor + i);
 			}
 			*(zor + i) = c - 13;
 			break;
