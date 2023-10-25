@@ -18,7 +18,9 @@ char *rot13(char *zor)
 				*(zor + i) = c + 26;
 			}
 			*(zor + i) = c - 13;
+			break;
 		}
 	}
+	i++
 	return (zor);
 }
