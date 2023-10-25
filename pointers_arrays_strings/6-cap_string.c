@@ -11,8 +11,8 @@ char *cap_string(char *zor)
 	i = 0;
 	while (*(zor + i) != '\0')
 	{
-		c = *(zor + i)
-		p = *(zor + i - 1)
+		c = *(zor + i);
+		p = *(zor + i - 1);
 		if (i == 0 && *(zor + i) >= 97 && *(zor + i) <= 122)
 		{
 			*(zor + i) = c - 32;
