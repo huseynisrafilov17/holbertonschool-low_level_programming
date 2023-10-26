@@ -1,5 +1,5 @@
 #include <string.h>
-char *add_part1 (char *n1, char *n2, char *r)
+int *add_part1 (char *n1, char *n2, char *r)
 {
 	int n_1, n_2, i, size1, size2, temp;
 	size1 = strlen(n1) - 1;
@@ -34,7 +34,7 @@ char *add_part1 (char *n1, char *n2, char *r)
 			i--;
 		}
 	}
-	return (r);
+	return (temp);
 
 }
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
