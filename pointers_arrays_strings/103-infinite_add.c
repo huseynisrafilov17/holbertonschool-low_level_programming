@@ -49,13 +49,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	else if(temp > 0)
 	{
 		i = strlen(r) - 1;
+		*(r + i + 3) = 0;
 		while (i >= 0)
 		{
 			if (*(r + i) >= '0' && *(r + i) <= '9')
 				*(r + i + 1) = *(r + i);
 			i--;
 		}
-		/**r = temp + '0';*/	
+		*r = temp + '0';	
 	}
 	return (r);
 }
