@@ -20,7 +20,7 @@ int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 	{
 		if (size1 >= 0)
 		{
-			n_1 = (int)*(n1 + s1) - 48;
+			n_1 = (int)*(n1 + size1) - 48;
 			*(r + i)= (n_1 + temp) % 10 + 48;
 			temp = (n_1 + temp) / 10;
 			*s1 = *s1 - 1;
@@ -28,7 +28,7 @@ int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 		}
 		else if (size2 >= 0)
 		{
-			n_2 = (int)*(n2 + s2) - 48;
+			n_2 = (int)*(n2 + size2) - 48;
 			*(r + i)= (n_2 + temp) % 10 + 48;
 			temp = (n_2 + temp) / 10;
 			size2 = size2 - 1;
