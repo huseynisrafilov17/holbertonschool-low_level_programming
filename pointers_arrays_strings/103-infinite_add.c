@@ -51,6 +51,7 @@ int add_part1(char *n1, char *n2, char *r)
  * @n1: string number 1.
  * @n2: string number 2.
  * @r: result.
+ * @size_r: size required.
  * Return: result.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
