@@ -21,9 +21,9 @@ void print_number(int n)
 	{
 		divider = divider * 10;
 	}
-	for (; i >= 1; i /= 10)
+	for (; divider >= 1; divider /= 10)
 	{
-		_putchar((a / i) + '0');
-		a = a % i;
+		_putchar((a / divider) + '0');
+		a = a % divider;
 	}
 }
