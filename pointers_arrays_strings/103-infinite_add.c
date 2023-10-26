@@ -1,12 +1,12 @@
 #include <string.h>
 int temp = 0;
-char *add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
+char *add_part1 (char *n1, char *n2, char *r)
 {
 	int n_1, n_2, i, size1, size2;
-	size1 = *s1;
-	size2 = *s2;
-	i = (*s1 > *s2) ? *s1 : *s2;
-	while ((*s1 >= *s2 && *s2 >= 0) || (*s2 > *s1 && *s1 >= 0))
+	size1 = strlen(n1) - 1;
+	size2 = strlen(n2) - 2;
+	i = (size1 > size2) ? size1 : size2;
+	while ((size1 >= size2 && size2 >= 0) || (size2 > size1 && size1 >= 0))
 	{
 		n_1 = (int)*(n1 + size1) - 48;
 		n_2 = (int)*(n2 + size2) - 48;
@@ -23,7 +23,7 @@ char *add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 			n_1 = (int)*(n1 + size1) - 48;
 			*(r + i)= (n_1 + temp) % 10 + 48;
 			temp = (n_1 + temp) / 10;
-			*s1 = *s1 - 1;
+			size1--;
 			i--;
 		}
 		else if (size2 >= 0)
@@ -31,7 +31,7 @@ char *add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 			n_2 = (int)*(n2 + size2) - 48;
 			*(r + i)= (n_2 + temp) % 10 + 48;
 			temp = (n_2 + temp) / 10;
-			size2 = size2 - 1;
+			size2--;
 			i--;
 		}
 	}
@@ -41,9 +41,8 @@ char *add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, s1, s2;
-	s1 = strlen(n1) - 1;
-	s2 = strlen(n2) - 1;
-	r = add_part1(n1, n2, &s1, &s2, r);
+
+	r = add_part1(n1, n2, r);
 	if (temp > 0 && (int)strlen(r) >= size_r)
 	{
 		return (0);
