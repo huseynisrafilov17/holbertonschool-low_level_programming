@@ -40,8 +40,7 @@ int add_part1 (char *n1, char *n2, char *r)
 }
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	unsigned int i;
-	int temp;
+	int i, temp;
 	temp = add_part1(n1, n2, r);
 	if ((int)strlen(r) >= size_r)
 	{
