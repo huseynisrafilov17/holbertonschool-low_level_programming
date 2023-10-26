@@ -1,7 +1,7 @@
 #include <string.h>
 int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 {
-	int n_1, n_2, temp, i
+	int n_1, n_2, temp, i;
 	temp = 0;
 	i = (*s1 > *s2) ? *s1 : *s2;
 	while ((*s1 >= *s2 && *s2 >= 0) || (*s2 > *s1 && *s1 >= 0))
