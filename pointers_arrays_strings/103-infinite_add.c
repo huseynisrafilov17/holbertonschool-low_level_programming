@@ -48,13 +48,18 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else if(temp > 0)
 	{
-		i = strlen(r);
+		i = strlen(r) - 1;
 		while (i >= 0)
 		{
 			*(r + i + 1) = *(r + i);
 			i--;
 		}
 		*r = temp + '0';
+		while (size_r - 1 > (int)strlen(r))
+		{
+			*(r + size_r - 1) = '\0';
+			size_r--;
+		}
 	}
 	return (r);
 }
