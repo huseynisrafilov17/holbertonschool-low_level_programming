@@ -42,7 +42,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, temp;
 	temp = add_part1(n1, n2, r);
-	if (temp > 0 && (int)strlen(r) >= size_r)
+	if ((int)strlen(r) >= size_r)
 	{
 		return (0);
 	}
