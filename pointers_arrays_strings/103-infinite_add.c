@@ -35,7 +35,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			i--;
 		}
 	}
-	if(temp > 0)
+	if (temp > 0 && (int)strlen(r) >= size_r)
+	{
+		return (0);
+	}
+	else if(temp > 0)
 	{
 		i = strlen(r) - 1;
 		while (i >= 0)
@@ -45,12 +49,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		*r = temp + '0';
 	}
-	if ((int)strlen(r) >= size_r)
-	{
-		return (0);
-	}
-	else
-	{
-		return (r);
-	}
+	return (r);
 }
