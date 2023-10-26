@@ -48,7 +48,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else if(temp > 0)
 	{
-		i = strlen(r) - 1;
+		i = strlen(r);
 		while (i >= 0)
 		{
 			*(r + i + 1) = *(r + i);
