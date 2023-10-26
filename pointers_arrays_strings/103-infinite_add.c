@@ -55,7 +55,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			i--;
 		}
 		*r = temp + '0';
-		while (size_r - 1 > (int)strlen(r))
+		while (size_r - 1 >= (int)strlen(r))
 		{
 			*(r + size_r - 1) = '\0';
 			size_r--;
