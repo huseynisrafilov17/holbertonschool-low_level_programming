@@ -51,15 +51,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i = strlen(r) - 1;
 		while (i >= 0)
 		{
-			*(r + i + 1) = *(r + i);
+			if (*(r + i) >= '0' && *(r + i) <= '9')
+				*(r + i + 1) = *(r + i);
 			i--;
 		}
-		*r = temp + '0';
-		while (*(r + i) >= '0' && *(r + i) <= '9')
-		{
-			i++;
-		}
-		*(r + i) = '\0';
+		*r = temp + '0';		
 	}
 	return (r);
 }
