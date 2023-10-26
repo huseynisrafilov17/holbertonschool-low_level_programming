@@ -40,7 +40,7 @@ int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 }
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int n_1, n_2, temp, s1, s2;
+	int i, temp, s1, s2;
 	s1 = strlen(n1) - 1;
 	s2 = strlen(n2) - 1;
 	temp = add_part1(n1, n2, &s1, &s2, r);
