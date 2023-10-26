@@ -4,7 +4,7 @@ char *add_part1 (char *n1, char *n2, char *r)
 {
 	int n_1, n_2, i, size1, size2;
 	size1 = strlen(n1) - 1;
-	size2 = strlen(n2) - 2;
+	size2 = strlen(n2) - 1;
 	i = (size1 > size2) ? size1 : size2;
 	while ((size1 >= size2 && size2 >= 0) || (size2 > size1 && size1 >= 0))
 	{
