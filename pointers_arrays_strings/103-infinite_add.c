@@ -1,10 +1,10 @@
 #include <string.h>
-int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
+int temp = 0;
+char *add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 {
-	int n_1, n_2, temp, i, size1, size2;
+	int n_1, n_2, i, size1, size2;
 	size1 = *s1;
 	size2 = *s2;
-	temp = 0;
 	i = (*s1 > *s2) ? *s1 : *s2;
 	while ((*s1 >= *s2 && *s2 >= 0) || (*s2 > *s1 && *s1 >= 0))
 	{
@@ -35,7 +35,7 @@ int add_part1 (char *n1, char *n2, int *s1, int *s2, char *r)
 			i--;
 		}
 	}
-	return (temp);
+	return (r);
 
 }
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -43,7 +43,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i, temp, s1, s2;
 	s1 = strlen(n1) - 1;
 	s2 = strlen(n2) - 1;
-	temp = add_part1(n1, n2, &s1, &s2, r);
+	r = add_part1(n1, n2, &s1, &s2, r);
 	if (temp > 0 && (int)strlen(r) >= size_r)
 	{
 		return (0);
