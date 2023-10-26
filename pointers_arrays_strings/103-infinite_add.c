@@ -40,7 +40,8 @@ int add_part1 (char *n1, char *n2, char *r)
 }
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, temp, j;
+	unsigned int i;
+	int temp;
 	temp = add_part1(n1, n2, r);
 	if ((int)strlen(r) >= size_r)
 	{
@@ -48,15 +49,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else if(temp > 0)
 	{
-		i = strlen(r) / 2;
-		j = strlen(r) - i;
-		while (i >= 0 || j > 0)
+		i = strlen(r) - 1;
+		while (i >= 0)
 		{
 			*(r + i + 1) = *(r + i);
-			if (i>=0)
-				i--;
-			else
-				j--;
 		}
 		*r = temp + '0';
 	}
