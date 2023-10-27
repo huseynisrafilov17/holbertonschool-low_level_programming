@@ -24,7 +24,7 @@ void print_buffer(char *b, int size)
 			{
 				if (*(b + j) >= 32 || j % 10 == 0)
 				{
-					printf("% 35c", *(b + j));
+					printf("%35c", *(b + j));
 				}
 				else if (*(b + j) >= 32 || j % 10 == 9)
 				{
