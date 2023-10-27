@@ -11,9 +11,9 @@ void print_buffer(char *b, int size)
 			add = &(*(b + i));
 			diff = &(*add) - &(*b);
 			if (*b < 32)
-				printf("%p: 0%x", diff, *b);
+				printf("%ld: 0%x", diff, *b);
 			else
-				printf("%p: %x", &(*(b + i)) - b, *b);
+				printf("%ld: %x", &(*(b + i)) - b, *b);
 		}
 		else if (i % 2 == 1)
 		{
