@@ -8,8 +8,8 @@ void print_buffer(char *b, int size)
 	{
 		if (i % 10 == 0)
 		{
-			add = b + i;
-			diff = add - b;
+			add = &(*(b + i));
+			diff = &(*add) - &(*b);
 			if (*b < 32)
 				printf("%p: 0%x", diff, *b);
 			else
