@@ -11,11 +11,11 @@ void print_buffer(char *b, int size)
 		}
 		else if (i % 2 == 1)
 		{
-			printf("%02x ", *b);
+			printf("%02x ", *(b + i));
 		}
 		else
 		{
-			printf("%02x", *b);
+			printf("%02x", *(b + i));
 		}
 		i++;
 	}
