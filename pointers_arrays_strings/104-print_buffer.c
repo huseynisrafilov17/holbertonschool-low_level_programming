@@ -2,15 +2,16 @@
 void print_buffer(char *b, int size)
 {
 	int i = 0;
-	char *add;
+	char *add, *diff;
 
 	while (i <= size)
 	{
 		if (i % 10 == 0)
 		{
 			add = b + i;
+			diff = add - b;
 			if (*b < 32)
-				printf("%p: 0%x", add - b, *b);
+				printf("%p: 0%x", diff, *b);
 			else
 				printf("%p: %x", &(*(b + i)) - b, *b);
 		}
