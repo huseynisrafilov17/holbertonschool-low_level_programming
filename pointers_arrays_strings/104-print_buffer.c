@@ -2,7 +2,8 @@
 void print_buffer(char *b, int size)
 {
 	int i = 0;
-	char *add, *diff;
+	char *add;
+	long int diff;
 
 	while (i <= size)
 	{
