@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 			{
 				if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 0)
 				{
-					printf("%35c", *(b + j));
+					printf("%c", *(b + j));
 				}
 				else if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 9)
 				{
