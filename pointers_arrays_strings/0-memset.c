@@ -3,6 +3,7 @@
  * @s: string.
  * @b: byte.
  * @n: times.
+ * Return: pointer to string.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
