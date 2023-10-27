@@ -22,11 +22,11 @@ void print_buffer(char *b, int size)
 		{
 			for (; j <= i; j++)
 			{
-				if (*(b + j) >= 32 || j % 10 == 0)
+				if (*(b + j) >= 32 && j % 10 == 0)
 				{
 					printf("%35c", *(b + j));
 				}
-				else if (*(b + j) >= 32 || j % 10 == 9)
+				else if (*(b + j) >= 32 && j % 10 == 9)
 				{
 					printf("%c\n", *(b + j));
 				}
