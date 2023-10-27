@@ -17,7 +17,6 @@ void print_buffer(char *b, int size)
 		{
 			printf("%02x", *(b + i));
 		}
-		i++;
 		if (i % 10 == 9)
 		{
 			for (; j <= i; j++)
@@ -40,5 +39,6 @@ void print_buffer(char *b, int size)
 				}
 			}
 		}
+		i++;
 	}
 }
