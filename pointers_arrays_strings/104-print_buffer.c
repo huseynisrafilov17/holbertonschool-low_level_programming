@@ -8,7 +8,7 @@ void print_buffer(char *b, int size)
 		if (i % 10 == 0)
 		{
 			if (*b < 32)
-				printf("%p: 0%x", b, *b);
+				printf("%p: 0%x", (b + i) - b, *b);
 			else
 				printf("%p: %x", b, *b);
 		}
