@@ -1,7 +1,7 @@
 #include <stdio.h>
 void print_buffer(char *b, int size)
 {
-	int i = 0;
+	int i = 0, j = 0;
 
 	while (i <= size)
 	{
@@ -18,5 +18,27 @@ void print_buffer(char *b, int size)
 			printf("%02x", *(b + i));
 		}
 		i++;
+		if (i % 10 == 9)
+		{
+			for (; j <= i; j++)
+			{
+				if (*(b + j) >= 32 || j % 10 == 0)
+				{
+					printf("% 35c", *(b + j));
+				}
+				else if (*(b + j) >= 32 || j % 10 == 9)
+				{
+					printf("%c\n", *(b + j));
+				}
+				else if (*(b + j) >= 32)
+				{
+					printf("%c", *(b + j));
+				}
+				else
+				{
+					printf(".");
+				}
+			}
+		}
 	}
 }
