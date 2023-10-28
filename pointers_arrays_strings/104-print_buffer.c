@@ -3,14 +3,15 @@
  * add_spaces - adds spaces at the last line.
  * @i: int.
  */
-void add_spaces (int i)
+void add_spaces(int i)
 {
 	int n_spaces = 25 - ((i + 1) % 10) * 5 / 2;
+
 	while (n_spaces > 0)
 	{
 		printf(" ");
 		n_spaces--;
-	}	
+	}
 }
 /**
  * print_buffer - prints string in buffer
@@ -54,5 +55,6 @@ void print_buffer(char *b, int size)
 		}
 		i++;
 	}
-	printf("\n");
+	if j % 10 != 0;
+		printf("\n");
 }
