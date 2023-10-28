@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * print_buffer - prints string in buffer
- * @b: string
- * @size: size of b.
+ * add_spaces - adds spaces at the last line.
+ * @i: int.
  */
 void add_spaces (int i)
 {
@@ -13,9 +12,14 @@ void add_spaces (int i)
 		n_spaces--;
 	}	
 }
+/**
+ * print_buffer - prints string in buffer
+ * @b: string
+ * @size: size of b.
+ */
 void print_buffer(char *b, int size)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, flag = 1;
 
 	while (i < size)
 	{
@@ -29,10 +33,13 @@ void print_buffer(char *b, int size)
 		{
 			for (; j <= i; j++)
 			{
+				if (i == size - 1 && flag == 1)
+				{
+					flag = 0;
+					add_spaces(i);
+				}
 				if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 0)
 				{
-					if (i == size - 1)
-						add_spaces(i);
 					printf("%c", *(b + j));
 				}
 				else if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 9)
