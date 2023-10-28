@@ -4,10 +4,10 @@
  * @b: string
  * @size: size of b.
  */
-void add_spaces (int i, int j)
+/**void add_spaces (int i, int j)
 {
 	continue;
-}
+}*/
 void print_buffer(char *b, int size)
 {
 	int i = 0, j = 0;
