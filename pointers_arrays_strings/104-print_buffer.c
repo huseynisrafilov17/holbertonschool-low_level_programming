@@ -4,6 +4,10 @@
  * @b: string
  * @size: size of b.
  */
+void add_spaces (int i, int j)
+{
+	continue;
+}
 void print_buffer(char *b, int size)
 {
 	int i = 0, j = 0;
@@ -23,7 +27,7 @@ void print_buffer(char *b, int size)
 				if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 0)
 				{
 					if (i == size - 1)
-						printf("%n%-c", 25 - ((i % 10) + 1) * 5 / 2, *(b + j));
+						printf("%-35c", *(b + j));
 					else
 						printf("%c", *(b + j));
 				}
