@@ -29,13 +29,11 @@ void print_buffer(char *b, int size)
 		{
 			for (; j <= i; j++)
 			{
-				if (i == size - 1)
-				{
-					add_spaces(i);
-				}
 				if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 0)
 				{
-						printf("%c", *(b + j));
+					if (i == size - 1)
+						add_spaces(i);
+					printf("%c", *(b + j));
 				}
 				else if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 9)
 					printf("%c\n", *(b + j));
