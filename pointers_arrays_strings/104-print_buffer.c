@@ -33,7 +33,7 @@ void print_buffer(char *b, int size)
 		{
 			for (; j <= i; j++)
 			{
-				if (i == size - 1 && flag == 1)
+				if (i == size - 1 && flag == 1 && i % 10 != 9)
 				{
 					flag = 0;
 					add_spaces(i);
