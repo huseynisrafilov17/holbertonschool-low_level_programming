@@ -39,22 +39,13 @@ void print_buffer(char *b, int size)
 					flag = 0;
 					add_spaces(i);
 				}
-				if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 0)
-				{
+				if (*(b + j) >= 32 && *(b + j) <= 126)
 					printf("%c", *(b + j));
-				}
-				else if (*(b + j) >= 32 && *(b + j) <= 126 && j % 10 == 9)
-					printf("%c\n", *(b + j));
-				else if (*(b + j) >= 32 && *(b + j) <= 126)
-					printf("%c", *(b + j));
-				else if ((*(b + j) < 32 || *(b + j) > 126) && j % 10 == 9)
-					printf(".\n");
 				else
 					printf(".");
 			}
 		}
 		i++;
-	}
-	if j % 10 != 0;
 		printf("\n");
+	}
 }
