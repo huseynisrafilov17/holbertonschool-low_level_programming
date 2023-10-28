@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * _strpbrk - searches a string for any of a set of bytes.
  * @s: from this string.
@@ -14,10 +15,10 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*(s + i) == *(accept + j))
 			{
-				count++;
+				return (*(s + i));
 			}
 		}
 		i++;
 	}
-	return (count);
+	return (NULL);
 }
