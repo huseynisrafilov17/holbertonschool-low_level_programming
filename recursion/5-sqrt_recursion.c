@@ -13,7 +13,7 @@ int _sqrt(int root, int n)
 	return (root);
 }
 /**
- * _sqrt_recursion - a function that returns the natural square root of a number.
+ * _sqrt_recursion - returns the natural square root of a number.
  * @n: number.
  * Return: passes control to other function.
  */
