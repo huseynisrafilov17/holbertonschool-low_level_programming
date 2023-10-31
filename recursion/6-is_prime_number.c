@@ -14,7 +14,7 @@ int prime_check(int divide, int n)
 	{
 		return (0);
 	}
-	return (1)
+	return (1);
 }
 /**
  * is_prime_number - checks if a number is prime.
