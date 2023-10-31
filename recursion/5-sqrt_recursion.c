@@ -1,20 +1,20 @@
+int _sqrt (int root, int n)
+{
+	if (root * root < n)
+        {
+                return (_sqrt(root + 1, n));
+        }
+	else if (root * root > n)
+        {
+                return (-1);
+        }
+	return (root);
+}
 int _sqrt_recursion(int n)
 {
-	int root, flag;
-
-	if (root && flag)
-	{
-		root = 0;
-		flag = 0;
-	}
-	if (root * root < n)
-	{
-		root++;
-		_sqrt_recursion(n);
-	}
-	else if (root * root > n)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	return (root);
+	return (_sqrt(0, n));
 }
