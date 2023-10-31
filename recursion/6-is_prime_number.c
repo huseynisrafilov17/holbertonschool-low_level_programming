@@ -10,7 +10,7 @@ int prime_check(int divide, int n)
 	{
 		prime_check(divide + 1, n);
 	}
-	else if (n % divide == 0)
+	else if ((n % divide == 0 && divide < n) || n <= 1)
 	{
 		return (0);
 	}
