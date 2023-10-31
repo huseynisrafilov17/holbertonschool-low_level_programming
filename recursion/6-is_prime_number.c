@@ -23,5 +23,5 @@ int prime_check(int divide, int n)
  */
 int is_prime_number(int n)
 {
-	prime_check(2, n);
+	return(prime_check(2, n));
 }
