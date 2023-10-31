@@ -1,10 +1,7 @@
-
 int _sqrt_recursion(int n)
 {
-	if (!root)
-	{
-		int root = 0;
-	}
+	int root;
+
 	if (root * root < n)
 	{
 		root++;
