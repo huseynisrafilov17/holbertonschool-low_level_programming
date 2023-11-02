@@ -8,11 +8,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0, a;
+	int i, sum = 0, a, check;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]) == 1)
+		check = isdigit(*argv[i]);
+		if (check == 1)
 		{
 			printf("Error");
 			return (1);
