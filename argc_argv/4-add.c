@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		if (isint(argv[i]) == 0)
 		{
-			printf("Error");
+			printf("Error\n");
 			return (1);
 		}
 		a = atoi(argv[i]);
