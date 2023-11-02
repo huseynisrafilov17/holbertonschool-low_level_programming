@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-int isdigit(char *s)
+/**
+ * isint - check if it is int.
+ * @s: string.
+ * Return: 0 or 1.
+ */
+int isint(char *s)
 {
 	if (*s >= '0' && *s <= '9')
 	{
-		return (isdigit(s + 1));
+		return (isint(s + 1));
 	}
 	else if (*s == '\0')
 	{
@@ -24,7 +29,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i]) == 0)
+		if (isint(argv[i]) == 0)
 		{
 			printf("Error");
 			return (1);
