@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+int isdigit(char *s)
+{
+	if (*s >= '0' && *s <= '9')
+	{
+		return (isdigit(s + 1));
+	}
+	else if (*s == '\0')
+	{
+		return (1);
+	}
+	return (0);
+}
 /**
  * main - Main entry point
  * @argc: int.
@@ -9,12 +20,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0, a, check;
+	int i, sum = 0, a;
 
 	for (i = 1; i < argc; i++)
 	{
-		check = isdigit(*argv[i]);
-		if (check == 1)
+		if (isdigit(argv[i]) == 0)
 		{
 			printf("Error");
 			return (1);
