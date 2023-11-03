@@ -7,7 +7,7 @@
  */
 int isint(char *s)
 {
-	if (*s >= '0' && *s <= '9')
+	if ((*s >= '0' && *s <= '9') || *s == '-')
 	{
 		return (isint(s + 1));
 	}
@@ -33,9 +33,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	if (isint(argv[1]) == 1 && atoi(argv[1]) <= 0)
-	{
 		printf("0\n");
-	}
 	else if (isint(argv[1]) == 1 && atoi(argv[1]) >= 0)
 	{
 		cents = atoi(argv[1]);
