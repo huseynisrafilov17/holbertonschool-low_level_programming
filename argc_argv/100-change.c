@@ -32,38 +32,35 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (isint(argv[1]) == 1 && atoi(argv[1]) >= 0)
+	cents = atoi(argv[1]);
+	while (cents > 0)
 	{
-		cents = atoi(argv[1]);
-		while (cents > 0)
+		if (cents >= 25)
 		{
-			if (cents >= 25)
-			{
-				a = a + 1;
-				cents = cents - 25;
-			}
-			else if (cents >= 10)
-			{
-				a = a + 1;
-				cents = cents - 10;
-			}
-			else if (cents >= 5)
-			{
-				a = a + 1;
-				cents = cents - 5;
-			}
-			else if (cents >= 2)
-			{
-				a = a + 1;
-				cents = cents - 2;
-			}
-			else if (cents >= 1)
-			{
-				a = a + 1;
-				cents = cents - 1;
-			}
+			a = a + 1;
+			cents = cents - 25;
 		}
-		printf("%d\n", a);
+		else if (cents >= 10)
+		{
+			a = a + 1;
+			cents = cents - 10;
+		}
+		else if (cents >= 5)
+		{
+			a = a + 1;
+			cents = cents - 5;
+		}
+		else if (cents >= 2)
+		{
+			a = a + 1;
+			cents = cents - 2;
+		}
+		else if (cents >= 1)
+		{
+			a = a + 1;
+			cents = cents - 1;
+		}
 	}
+	printf("%d\n", a);
 	return (0);
 }
