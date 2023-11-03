@@ -32,12 +32,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	if (isint(argv[1]) == 1 && atoi(argv[1]) <= 0)
-		printf("0\n");
 	else if (isint(argv[1]) == 1 && atoi(argv[1]) >= 0)
 	{
 		cents = atoi(argv[1]);
-		while (cents != 0)
+		while (cents > 0)
 		{
 			if (cents >= 25)
 			{
