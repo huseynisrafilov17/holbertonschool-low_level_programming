@@ -2,7 +2,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	int i;
+	unsigned int i;
 	char *arr;
 
 	if (size == 0)
