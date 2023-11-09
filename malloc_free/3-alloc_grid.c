@@ -1,9 +1,15 @@
 #include <stdlib.h>
+/**
+ * alloc_grid - 2 dimesional array.
+ * @width: width of array.
+ * @height: height of array.
+ * Return: pointer to grid.
+ */
 int **alloc_grid(int width, int height)
 {
 	int i = 0, j = 0;
 	int **arr = (int **)malloc(height * sizeof(int *));
-	
+
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	if (arr == NULL)
