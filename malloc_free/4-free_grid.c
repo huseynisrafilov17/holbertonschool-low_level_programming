@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * free_grid: frees memory allocated to 2d array.
+ * free_grid - frees memory allocated to 2d array.
  * @grid: 2d array pointer.
  * @height: height of array.
  */
