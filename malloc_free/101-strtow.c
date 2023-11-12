@@ -7,7 +7,8 @@ char **strtow(char *str)
 	for (; str[i - 1] != '\0'; i++)
 		if ((str[i] == 32 || str[i] == '\0') && str[i - 1] != 32)
 			word_count++;
-	s = (char **)malloc(word_count * sizeof(char *));
+	s = (char **)malloc((word_count + 1) * sizeof(char *));
+	s[word_count] = NULL;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != 32)
