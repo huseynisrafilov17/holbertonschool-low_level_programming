@@ -1,5 +1,11 @@
 #include <stdlib.h>
 #include <string.h>
+/**
+ * argstostr - concatenates all strings in arguments to one.
+ * @ac: argument count.
+ * @av: arguments
+ * Return: pointer.
+ */
 char *argstostr(int ac, char **av)
 {
 	int i, j, length = 0, here = 0;
@@ -9,7 +15,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		length = length + strlen(av[i]) + 1;
-	s = (char *)malloc(length * sizeof(char));
+	s = (char *)malloc(length * sizeof(char) + 1);
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j <= (int)strlen(av[i]); j++)
@@ -21,5 +27,6 @@ char *argstostr(int ac, char **av)
 			here++;
 		}
 	}
-	return(s);
+	s[here] = '\0';
+	return (s);
 }
