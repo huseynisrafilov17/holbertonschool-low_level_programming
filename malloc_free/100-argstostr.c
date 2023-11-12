@@ -9,13 +9,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		length = length + strlen(av[i]) + 1;
-	s = (char *)malloc(length * strlen(char));
+	s = (char *)malloc(length * sizeof(char));
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j <= strlen(av[i]); j++)
+		for (j = 0; j <= (int)strlen(av[i]); j++)
 		{
-			if (j < strlen(av[i]))
-				s[here] = *av[i][j];
+			if (j < (int)strlen(av[i]))
+				s[here] = av[i][j];
 			else
 				s[here] = '\n';
 			here++;
