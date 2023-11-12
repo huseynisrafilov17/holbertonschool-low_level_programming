@@ -27,7 +27,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != 32)
 		{
-			s[here][length] = s[i];
+			s[here][length] = str[i];
 			length++;
 		}
 		else if (str[i] == 32 && length != 0)
@@ -38,6 +38,6 @@ char **strtow(char *str)
 		}
 	}
 	if (length != 0)
-		s[here][length] = s[i - 1];
+		s[here][length] = '\0';
 	return (s);
 }
