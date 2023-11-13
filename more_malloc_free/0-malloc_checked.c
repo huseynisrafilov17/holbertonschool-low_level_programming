@@ -2,6 +2,7 @@
 /**
  * malloc_checked - checks malloc and allocates.
  * @b: size.
+ * Return: pointer.
  */
 void *malloc_checked(unsigned int b)
 {
