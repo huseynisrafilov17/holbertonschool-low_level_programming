@@ -9,7 +9,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	s = malloc(nmemb * size);
 	if (s == NULL)
-		return (s);
+		return (NULL);
 	for (i = 0; i < (int)nmemb; i++)
 		*((int *)s + i) = 0;
 	return (s);
