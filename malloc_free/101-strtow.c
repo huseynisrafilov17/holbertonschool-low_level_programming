@@ -14,9 +14,9 @@ char **strtow(char *str)
 	for (; str[i - 1] != '\0'; i++)
 		if ((str[i] == 32 || str[i] == '\0') && str[i - 1] != 32)
 			word_count++;
-	s = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (word_count == 0)
 		return (NULL);
+	s = (char **)malloc((word_count + 1) * sizeof(char *));
 	s[word_count] = NULL;
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -31,8 +31,7 @@ char **strtow(char *str)
 	}
 	if (length != 0)
 		s[here] = (char *)malloc(length * sizeof(char) + 1);
-	here = 0;
-	length = 0;
+	here = length = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != 32)
