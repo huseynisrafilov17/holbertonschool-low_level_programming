@@ -6,6 +6,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i;
 	char *s;
 
+	if (s1 == NULL)
+		*s1 = '\0';
+	if (s2 == NULL)
+		*s2 = '\0';
 	if ((int)n > (int)strlen(s2))
 		n = (int)strlen(s2);
 	s = malloc(((int)strlen(s1) + n + 1) * sizeof(char));
@@ -16,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < (int)strlen(s1))
 			s[i] = s1[i];
 		else
-			s[i] = s2[i];
+			s[i] = s2[i - (int)strlen(s1)];
 	}
 	return (s);
 }
