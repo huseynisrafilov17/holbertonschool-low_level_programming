@@ -1,18 +1,22 @@
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * string_nconcat - concatenates two strings.
+ * @s1: string1.
+ * @s2: string2.
+ * @n: number of chars.
+ * Return: pointer.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i, len1, len2;
-	char *s;
+	char *s, *empty_string;
 
+	*empty_string = '\0'
 	if (s1 == NULL)
-		*s1 = '\0';
+		s1 = empty_string;
 	if (s2 == NULL)
-	{
-		*s2 = '\0';
-		n = 0;
-	}
+		s2 = empty_string;
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	if ((int)n > len2)
