@@ -1,4 +1,11 @@
 #include <stdlib.h>
+/**
+ * _realloc - realloc.
+ * @ptr: old pointer.
+ * @old_size: old size.
+ * @new_size: new size.
+ * Return: new pointer.
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	int i;
