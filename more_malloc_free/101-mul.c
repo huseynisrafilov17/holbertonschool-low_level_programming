@@ -76,7 +76,7 @@ char *infinite_add(char *n1, char *n2, char *r)
 }
 int main(int argc, char *argv[])
 {
-	int l = 0, s1_true = 1, s2_true = 1;
+	int l1 = 0, l2 = 0, s1_true = 1, s2_true = 1;
 	char *s;
 
 	if (argc != 3)
@@ -84,19 +84,22 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	while (argv[1][l] != '\0')
+	while (argv[1][l1] != '\0')
 	{
-		if (argv[1][l] < 48 || argv[1][l] > 57)
+		if (argv[1][l1] < 48 || argv[1][l1] > 57)
 			s1_true = 0;
-		l++;
+		l1++;
 	}
-	l = 0;
-	while (argv[2][l] != '\0')
+	while (argv[2][l2] != '\0')
         {
-		if (argv[2][l] < 48 || argv[2][l] > 57)
+		if (argv[2][l2] < 48 || argv[2][l2] > 57)
 			s2_true = 0;
-		l++;
+		l2++;
         }
+	if (l1 > l2)
+		s = malloc((l1 + 1) * sizeof(char));
+	else
+		s = malloc((l2 + 1) * sizeof(char));
 	if (s1_true == 1 && s2_true == 1)
 		s = infinite_add(argv[1], argv[2], s);
 	else
