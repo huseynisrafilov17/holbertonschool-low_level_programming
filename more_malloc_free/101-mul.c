@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 /**
  * add_part1 - part 1 of my code.
  * @n1: string number 1.
@@ -59,7 +60,7 @@ char *infinite_add(char *n1, char *n2, char *r)
 	int i, temp;
 
 	temp = add_part1(n1, n2, r);
-	else if (temp > 0)
+	if (temp > 0)
 	{
 		i = strlen(r) - 1;
 		*(r + i + 3) = 0;
@@ -73,14 +74,14 @@ char *infinite_add(char *n1, char *n2, char *r)
 	}
 	return (r);
 }
-int main(int argc, void *argv[])
+int main(int argc, void **argv)
 {
 	int l = 0, s1_true = 1, s2_true = 1;
 	char *s;
 
 	if (argc != 3)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 	while (argv[1][l] != '\0')
