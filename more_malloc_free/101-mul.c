@@ -74,7 +74,7 @@ char *infinite_add(char *n1, char *n2, char *r)
 	}
 	return (r);
 }
-int main(int argc, void **argv)
+int main(int argc, char *argv[])
 {
 	int l = 0, s1_true = 1, s2_true = 1;
 	char *s;
