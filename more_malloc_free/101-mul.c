@@ -43,6 +43,8 @@ void multiplication(char *s1, char *s2, char *result,int length)
 	while (!(result[0] >= 48 && result[0] <= 57))
 		for (i = 0; i <= length; i++)
 			result[i] = result[i + 1];
+	s1 = "";
+	s2 = "";
 }
 int main(int argc, char *argv[])
 {
