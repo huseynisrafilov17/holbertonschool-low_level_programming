@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	str[strlen(argv[1]) + strlen(argv[2])] = '\0';
-	multiplication(argv[1], argv[2], s, strlen(argv[1]) + strlen(argv[2]) - 1);
+	multiplication(argv[1], argv[2], str, strlen(argv[1]) + strlen(argv[2]) - 1);
 	while (str[i] != '\0')
 	{
 		putchar(str[i]);
