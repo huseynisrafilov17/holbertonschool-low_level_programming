@@ -34,6 +34,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	if (argv[1][0] == 0 || argv[2][0] == 0)
+	{
+		printf("0");
+		return (0);
+	}
 	s = calloc(strlen(argv[1]) + strlen(argv[2]) + 1, sizeof(char));
 	if (s == NULL)
 	{
