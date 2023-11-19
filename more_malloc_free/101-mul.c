@@ -13,7 +13,7 @@ int isint(char *s)
 void multiplication(char *s1, char *s2, char *result,int length)
 {
 	char *another_ptr = result + length, *inside_ptr;
-	int i, j, l1 = strlen(s1) - 1, l2 = strlen(s2) - 1;
+	int i, j, l1 = strlen(s1) - 1, l2 = strlen(s2) - 1, carry_between = 0;
 	int carry = 0, a;
 
 	for (i = l1; i >= 0; i--)
@@ -23,15 +23,23 @@ void multiplication(char *s1, char *s2, char *result,int length)
 		{
 			if (*inside_ptr < 48 || *inside_ptr > 57)
 				*inside_ptr = '0';
+			if (j == 0)
+				carry = carry + carry_between;
 			a = carry + ((int)s1[i] - 48)* ((int)s2[j] - 48) + (int)*inside_ptr - 48;
 			*inside_ptr = a % 10 + 48;
-			carry = a / 10;
+			if (j > 0)
+				carry = a / 10;
+			else
+			{
+				carry_between = a / 10;
+				carry = 0;
+			}
 			inside_ptr--;
 		}
 		another_ptr--;
 	}
-	if (carry != 0)
-		*inside_ptr = carry + 48;
+	if (carry_between != 0)
+		*inside_ptr = carry_between + 48;
 	while (!(result[0] >= 48 && result[0] <= 57))
 		for (i = 0; i <= length; i++)
 			result[i] = result[i + 1];
