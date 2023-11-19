@@ -2,6 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include "main.h"
+/**
+ * isint - check if string is int.
+ * @s: string
+ * Return: 1 if true, 0 if false.
+ */
 int isint(char *s)
 {
 	int i;
@@ -11,6 +16,13 @@ int isint(char *s)
 			return (0);
 	return (1);
 }
+/**
+ * multiplication - multiplies
+ * @s1: string.
+ * @s2: string.
+ * @result: pointer.
+ * @length: length of allocated memory.
+ */
 void multiplication(char *s1, char *s2, char *result,int length)
 {
 	char *another_ptr = result + length, *inside_ptr;
@@ -47,6 +59,12 @@ void multiplication(char *s1, char *s2, char *result,int length)
 	another_ptr = NULL;
 	inside_ptr = NULL;
 }
+/**
+ * main - Entry point.
+ * @argc: argument count.
+ * @argv: arguments.
+ * Return: 1 or 0.
+ */
 int main(int argc, char *argv[])
 {
 	int i = 0;
