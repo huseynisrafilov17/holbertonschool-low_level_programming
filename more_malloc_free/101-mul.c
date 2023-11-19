@@ -20,7 +20,7 @@ void multiplication(char *s1, char *s2, char *result,int length)
 		{
 			if (result[length - i - j] == '\0')
 				result[length - i - j] = '0';
-			a = carry + (atoi(s1[i]) * atoi(s2[j])) + atoi(result[length - i - j]);
+			a = carry + (atoi(s1 + i) * atoi(s2 + j)) + atoi(result + length - i - j);
 			result[length - i - j] = a % 10;
 			carry = a / 10;
 		}
