@@ -41,5 +41,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	multiplication(argv[1], argv[2], s, strlen(argv[1]) + strlen(argv[2]) - 1);
+	printf("%s\n", s);
+	free(s);
 	return (0);
 }
