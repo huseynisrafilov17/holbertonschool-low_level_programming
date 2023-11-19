@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	s = malloc(strlen(argv[1]) + strlen(argv[2]) + 1);
+	s = calloc(strlen(argv[1]) + strlen(argv[2]) + 1, sizeof(char));
 	s[strlen(argv[1]) + strlen(argv[2])] = '\0';
 	if (s == NULL)
 	{
