@@ -43,8 +43,6 @@ void multiplication(char *s1, char *s2, char *result,int length)
 	while (!(result[0] >= 48 && result[0] <= 57))
 		for (i = 0; i <= length; i++)
 			result[i] = result[i + 1];
-	s1 = "";
-	s2 = "";
 }
 int main(int argc, char *argv[])
 {
@@ -60,8 +58,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	s = malloc(strlen(argv[1]) + strlen(argv[2]) + 1);
-	s[strlen(argv[1]) + strlen(argv[2])] = '\0';
+	s = malloc(strlen(argv[1]) + strlen(argv[2]));
 	if (s == NULL)
 	{
 		free(s);
