@@ -46,6 +46,7 @@ void multiplication(char *s1, char *s2, char *result,int length)
 }
 int main(int argc, char *argv[])
 {
+	int i = 0;
 	char *s;
 
 	if (argc != 3 || isint(argv[1]) != 1 || isint(argv[2]) != 1)
@@ -58,7 +59,8 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	s = malloc(strlen(argv[1]) + strlen(argv[2]));
+	s = malloc(strlen(argv[1]) + strlen(argv[2]) + 1);
+	s[strlen(argv[1]) + strlen(argv[2])] = '\0'
 	if (s == NULL)
 	{
 		free(s);
@@ -66,7 +68,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	multiplication(argv[1], argv[2], s, strlen(argv[1]) + strlen(argv[2]) - 1);
-	printf("%s\n", s);
+	while (s[i] != '\0')
+	{
+		putchar(s[i]);
+		i++;
+	}
 	free(s);
 	return (0);
 }
