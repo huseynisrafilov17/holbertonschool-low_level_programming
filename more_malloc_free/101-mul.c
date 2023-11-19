@@ -13,16 +13,16 @@ int isint(char *s)
 void multiplication(char *s1, char *s2, char *result,int length)
 {
 	char *another_ptr = result + length;
-	int i = 0, j = 0, l1 = strlen(s1) - 1, l2 = strlen(s2) - 1;
+	int i = 0, j = 0, l1 = strlen(s1), l2 = strlen(s2);
 	int carry = 0, a;
 
 	for (i = l1; i >= 0; i--)
 		for (j = l2; j >=0; j--)
 		{
-			if (result[length - i - j] < 48 || result[length - i - j] > 57)
+			if (*another_ptr < 48 || *another_ptr > 57)
 				result[length - i - j] = '0';
-			a = carry + atoi(s1 + i) * atoi(s2 + j) + atoi(result + length - i - j);
-			result[length - i - j] = a % 10 + 48;
+			a = carry + atoi(s1 + i) * atoi(s2 + j) + atoi(another_ptr);
+			*another_ptr = a % 10 + 48;
 			carry = a / 10;
 			another_ptr--;
 		}
