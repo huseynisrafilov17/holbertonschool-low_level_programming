@@ -12,6 +12,7 @@ int isint(char *s)
 }
 void multiplication(char *s1, char *s2, char *result,int length)
 {
+	char *another_ptr = result + length;
 	int i = 0, j = 0, l1 = strlen(s1) - 1, l2 = strlen(s2) - 1;
 	int carry = 0, a;
 
@@ -21,9 +22,15 @@ void multiplication(char *s1, char *s2, char *result,int length)
 			if (result[length - i - j] == '\0')
 				result[length - i - j] = '0';
 			a = carry + (atoi(s1 + i) * atoi(s2 + j)) + atoi(result + length - i - j);
-			result[length - i - j] = a % 10;
+			result[length - i - j] = a % 10 + 48;
 			carry = a / 10;
+			another_ptr--;
 		}
+	if (carry != 0)
+		(another_ptr - 1) = carry + 48;
+	else
+		for (i = 0; i <= length; i++)
+			result[i] = result[i + 1];
 }
 int main(int argc, char *argv[])
 {
