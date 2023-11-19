@@ -19,9 +19,9 @@ void multiplication(char *s1, char *s2, char *result,int length)
 	for (i = l1; i >= 0; i--)
 		for (j = l2; j >=0; j--)
 		{
-			if (result[length - i - j] == '\0')
+			if (result[length - i - j] < 48 || result[length - i - j] > 57)
 				result[length - i - j] = '0';
-			a = carry + (atoi(s1 + i) * atoi(s2 + j)) + atoi(result + length - i - j);
+			a = carry + atoi(s1 + i) * atoi(s2 + j) + atoi(result + length - i - j);
 			result[length - i - j] = a % 10 + 48;
 			carry = a / 10;
 			another_ptr--;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[1][0] == 0 || argv[2][0] == 0)
+	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
 		printf("0\n");
 		return (0);
