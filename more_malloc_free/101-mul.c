@@ -73,7 +73,6 @@ int main(int argc, char *argv[])
 		putchar(s[i]);
 		i++;
 	}
-	putchar('1');
 	putchar('\n');
 	free(s);
 	return (0);
