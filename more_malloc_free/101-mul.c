@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	s = malloc(strlen(argv[1]) + strlen(argv[2]) + 1);
-	s[strlen(argv[1]) + strlen(argv[2])] = '\0'
+	s[strlen(argv[1]) + strlen(argv[2])] = '\0';
 	if (s == NULL)
 	{
 		free(s);
