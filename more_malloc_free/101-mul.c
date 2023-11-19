@@ -3,8 +3,8 @@
 #include <stdlib.h>
 int main(int argc, char *argv[])
 {
-	int s1_true = 1, s2_true = 1;
-	long long unsigned int dig1, dig2;
+	int l1 = 0, l2 = 0,s1_true = 1, s2_true = 1;
+	long unsigned int dig1, dig2;
 
 	if (argc != 3)
 	{
