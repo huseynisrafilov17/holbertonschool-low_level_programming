@@ -10,7 +10,7 @@
 int isint(char *s)
 {
 	int i;
-	
+
 	for (i = 0; s[i] != '\0'; i++)
 		if (s[i] < 48 || s[i] > 57)
 			return (0);
@@ -23,7 +23,7 @@ int isint(char *s)
  * @result: pointer.
  * @length: length of allocated memory.
  */
-void multiplication(char *s1, char *s2, char *result,int length)
+void multiplication(char *s1, char *s2, char *result, int length)
 {
 	char *another_ptr = result + length, *inside_ptr;
 	int i, j, carry_between = 0;
@@ -32,13 +32,13 @@ void multiplication(char *s1, char *s2, char *result,int length)
 	for (i = (int)strlen(s1) - 1; i >= 0; i--)
 	{
 		inside_ptr = another_ptr;
-		for (j = (int)strlen(s2) - 1; j >=0; j--)
+		for (j = (int)strlen(s2) - 1; j >= 0; j--)
 		{
 			if (*inside_ptr < 48 || *inside_ptr > 57)
 				*inside_ptr = '0';
 			if (j == 0)
 				carry = carry + carry_between;
-			a = carry + ((int)s1[i] - 48)* ((int)s2[j] - 48) + (int)*inside_ptr - 48;
+			a = carry + ((int)s1[i] - 48) * ((int)s2[j] - 48) + (int)*inside_ptr - 48;
 			*inside_ptr = a % 10 + 48;
 			if (j > 0)
 				carry = a / 10;
