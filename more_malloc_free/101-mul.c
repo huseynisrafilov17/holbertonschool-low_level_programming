@@ -21,7 +21,7 @@ void multiplication(char *s1, char *s2, char *result,int length)
 		{
 			if (*another_ptr < 48 || *another_ptr > 57)
 				*another_ptr = '0';
-			a = carry + (int)s1[i] * (int)s2[j] + (int)*another_ptr - 144;
+			a = carry + ((int)s1[i] - 48)* ((int)s2[j] - 48) + (int)*another_ptr - 48;
 			*another_ptr = a % 10 + 48;
 			carry = a / 10;
 			another_ptr--;
