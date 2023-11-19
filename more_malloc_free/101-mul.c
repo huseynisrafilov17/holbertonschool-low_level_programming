@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
 	s[strlen(argv[1]) + strlen(argv[2])] = '\0';
 	if (s == NULL)
 	{
-		free(s);
 		printf("Failed");
 		return (1);
 	}
