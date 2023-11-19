@@ -47,7 +47,7 @@ void multiplication(char *s1, char *s2, char *result,int length)
 int main(int argc, char *argv[])
 {
 	int i = 0;
-	char str[150];
+	char *str;
 
 	if (argc != 3 || isint(argv[1]) != 1 || isint(argv[2]) != 1)
 	{
@@ -59,6 +59,12 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+	str = calloc(strlen(argv[1]) + strlen(argv[2]) + 1, sizeof(char));
+	if (str == NULL)
+	{
+		printf("Failed");
+		return (1);
+	}
 	str[strlen(argv[1]) + strlen(argv[2])] = '\0';
 	multiplication(argv[1], argv[2], str, strlen(argv[1]) + strlen(argv[2]) - 1);
 	while (str[i] != '\0')
@@ -67,5 +73,6 @@ int main(int argc, char *argv[])
 		i++;
 	}
 	putchar('\n');
+	free(str);
 	return (0);
 }
