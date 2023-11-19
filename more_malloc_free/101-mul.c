@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	if (argc != 3 || isint(argv[1]) != 1 || isint(argv[2]) != 1)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
