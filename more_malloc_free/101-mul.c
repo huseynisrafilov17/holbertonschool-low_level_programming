@@ -69,10 +69,10 @@ int main(int argc, char *argv[])
 	multiplication(argv[1], argv[2], str, strlen(argv[1]) + strlen(argv[2]) - 1);
 	while (str[i] != '\0')
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	free(str);
 	return (0);
 }
