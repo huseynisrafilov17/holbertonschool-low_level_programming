@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+int isint(char *s)
+{
+	int i;
+	
+	for (i = 0; s[i] != '\0'; i++)
+		if (s[i] < 48 || s[i] > 57)
+			return (0);
+	return (1);
+}
+void multiplication(char *s1, char *s2, char *result,int length)
+{
+	int i = 0, j = 0, l1 = strlen(s1) - 1, l2 = strlen(s2) - 1;
+	int carry = 0, a;
+
+	for (i = l1; i >= 0; i--)
+		for (j = l2; j >=0; j--)
+		{
+			if (result[length - i - j] == '\0')
+				result[length - i - j] = '0';
+			a = carry + (s1[i] * s2[j]) + (int)result[length - i - j] - 48;
+			result[length - i - j] = a % 10;
+			carry = a / 10;
+		}
+}
 int main(int argc, char *argv[])
 {
-	int l1 = 0, l2 = 0,s1_true = 1, s2_true = 1;
-	long unsigned int dig1, dig2;
+	char *s;
 
-	if (argc != 3)
+	if (argc != 3 || isint(argv[1]) != 1 || isint(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	while (argv[1][l1] != '\0')
+	s = calloc(strlen(argv[1]) + strlen(argv[2]) + 1, sizeof(char));
+	if (s == NULL)
 	{
-		if (argv[1][l1] < 48 || argv[1][l1] > 57)
-			s1_true = 0;
-		l1++;
+		printf("Failed");
+		return (1);
 	}
-	while (argv[2][l2] != '\0')
-        {
-		if (argv[2][l2] < 48 || argv[2][l2] > 57)
-			s2_true = 0;
-		l2++;
-        }
-	if (s1_true == 1 && s2_true == 1)
-	{
-		dig1 = atoi(argv[1]);
-		dig2 = atoi(argv[2]);
-		printf("%lu\n", dig1 + dig2);
-	}
-	else
-	{
-		printf("Error\n");
-		exit(98);
-	}
+	multiplication(argv[1], argv[2], s, strlen(argv[1]) + strlen(argv[2]) - 1);
 	return (0);
 }
