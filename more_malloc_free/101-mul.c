@@ -27,7 +27,7 @@ void multiplication(char *s1, char *s2, char *result,int length)
 			another_ptr--;
 		}
 	if (carry != 0)
-		(another_ptr - 1) = carry + 48;
+		*(another_ptr - 1) = carry + 48;
 	else
 		for (i = 0; i <= length; i++)
 			result[i] = result[i + 1];
