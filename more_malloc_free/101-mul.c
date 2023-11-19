@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		dig1 = atoi(argv[1]);
 		dig2 = atoi(argv[2]);
-		printf("%llu\n", dig1 + dig2);
+		printf("%lu\n", dig1 + dig2);
 	}
 	else
 	{
