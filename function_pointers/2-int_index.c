@@ -1,3 +1,10 @@
+#include <stdlib.h>
+/**
+ * int_index - returns result index of comparison.
+ * @array: array.
+ * @size: size of array.
+ * @cmp: function.
+ */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
