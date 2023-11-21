@@ -1,6 +1,7 @@
 #include <stdlib.h>
 /**
  * array_iterator - iterates in array
+ * @array: array.
  * @size: size of array.
  * @action: action.
  */
