@@ -7,12 +7,13 @@ int main(int argv, char *argc[])
 {
 	int a;
 	int b = atoi(argc[1]), c = atoi(argc[3]);
+	int (*operation)(int, int) = get_op_func(argc[2]);
+
 	if (argv != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	int (*operation)(int, int) = get_op_func(argc[2]);
 	if (operation != NULL)
 	{
 		a = operation(b, c);
