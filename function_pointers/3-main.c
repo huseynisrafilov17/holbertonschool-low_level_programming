@@ -12,10 +12,10 @@ int main(int argv, char *argc[])
 		printf("Error\n");
 		exit(98);
 	}
-	int (*operation)(int, int) = get_op_func(argv[2]);
+	int (*operation)(int, int) = get_op_func(argc[2]);
 	if (operation != NULL)
 	{
-		a = operation(argc[2])(b, c);
+		a = operation(b, c);
 		printf("%d\n", a);
 		return (0);
 	}
