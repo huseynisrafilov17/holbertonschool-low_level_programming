@@ -1,6 +1,6 @@
 #include "3-calc.h"
-#include <stdlib.h>i
-#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * get_op_func - gets operation function
  * @s: operator.
