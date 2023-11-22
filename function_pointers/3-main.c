@@ -12,12 +12,16 @@ int main(int argv, char *argc[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(argc[2])(b, c) != NULL)
+	int (*operation)(int, int) = get_op_func(argv[2]);
+	if (operation != NULL)
 	{
-		a = get_op_func(argc[2])(b, c);
+		a = operation(argc[2])(b, c);
 		printf("%d\n", a);
 		return (0);
 	}
-	printf("Error\n");
-	exit(100);
+	else
+	{
+		printf("Error\n");
+		exit(100);
+	}
 }
