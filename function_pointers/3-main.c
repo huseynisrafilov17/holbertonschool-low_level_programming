@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * main - Entry point.
+ * @argv: argument count.
+ * @argc: argument array.
+ * Return: 0.
+ */
 int main(int argv, char *argc[])
 {
 	int a;
