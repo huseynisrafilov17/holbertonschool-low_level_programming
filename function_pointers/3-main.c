@@ -24,6 +24,6 @@ int main(int argv, char *argc[])
 	else
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 }
