@@ -13,6 +13,11 @@ int main(int argv, char *argc[])
 		exit(98);
 	}
 	a = get_op_func(argc[2])(b, c);
+	if (a == NULL)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	printf("%d\n", a);
 	return (0);
 }
