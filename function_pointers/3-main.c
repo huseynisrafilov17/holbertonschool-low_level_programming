@@ -6,7 +6,7 @@
 int main(int argv, char *argc[])
 {
 	int a;
-	int b = atoi(argc[1]), c = atoi(argc[3]);
+	int b, c;
 	int (*operation)(int, int) = get_op_func(argc[2]);
 
 	if (argv != 4)
@@ -14,6 +14,9 @@ int main(int argv, char *argc[])
 		printf("Error\n");
 		exit(98);
 	}
+	b = atoi(argc[1]);
+	c = atoi(argc[3]);
+	operation = get_op_func(argc[2]);
 	if (operation != NULL)
 	{
 		a = operation(b, c);
