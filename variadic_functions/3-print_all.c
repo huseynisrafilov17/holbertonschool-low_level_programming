@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 			i++;
 			continue;
 		}
-		printf("%c", va_arg(ap, char));
+		printf("%c", va_arg(ap, int));
 		i++;
 	}
 	i = 0;
@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 			i++;
 			continue;
 		}
-		printf("%f", va_arg(ap, float));
+		printf("%f", va_arg(ap, double));
 		i++;
 	}
 	va_end(ap);
