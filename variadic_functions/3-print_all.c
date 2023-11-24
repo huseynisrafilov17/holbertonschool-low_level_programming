@@ -1,7 +1,10 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdio.h>
-
+/**
+ * print_all - prints in all formats.
+ * @format: formats string.
+ */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
@@ -12,17 +15,14 @@ void print_all(const char * const format, ...)
 	while (format != NULL && *(format + i) != '\0')
 	{
 		put_comma = 0;
-		switch(*(format + i))
+		switch (*(format + i))
 		{
 			case 's':
 				put_comma = 1;
 				s = va_arg(ap, char *);
-				if (s != NULL)
-				{
-					printf("%s", s);
-					break;
-				}
-				printf("(nil)");
+				if (s i== NULL)
+					s = "(nil)";
+				printf("%s", s);
 				break;
 			case 'c':
 				put_comma = 1;
