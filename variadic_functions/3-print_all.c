@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				put_comma = 1;
 				s = va_arg(ap, char *);
-				if (s i== NULL)
+				if (s == NULL)
 					s = "(nil)";
 				printf("%s", s);
 				break;
