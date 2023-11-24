@@ -9,7 +9,7 @@ void print_all(const char * const format, ...)
 	int i = 0, put_comma = 0;
 
 	va_start(ap, format);
-	while (*(format + i) != '\0' && format + i == NULL)
+	while (*(format + i) != '\0' && format + i != NULL)
 	{
 		put_comma = 0;
 		switch(*(format + i))
