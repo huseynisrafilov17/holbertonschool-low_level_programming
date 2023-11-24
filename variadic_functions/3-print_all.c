@@ -8,8 +8,9 @@ void print_all(const char * const format, ...)
 	char *s;
 	int i = 0, put_comma = 0;
 
-	va_start(ap, format);
-	while (*(format + i) != '\0' && format + i != NULL)
+	if (format != NULL)
+		va_start(ap, format);
+	while (*(format + i) != '\0')
 	{
 		put_comma = 0;
 		switch(*(format + i))
