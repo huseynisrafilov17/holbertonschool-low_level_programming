@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	while (*(format + i) != '\0')
 	{
-		put_comma = 0
+		put_comma = 0;
 		switch(*(format + i))
 		{
 			case 's':
