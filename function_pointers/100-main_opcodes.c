@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2) {
 		fprintf(stderr, "Error\n");
-		return 1;
+		exit(1);
 	}
 	num_bytes = atoi(argv[1]);
 	print_own_opcodes(num_bytes);
