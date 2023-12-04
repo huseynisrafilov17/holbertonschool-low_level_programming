@@ -1,7 +1,10 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+/**
+ * free_list - frees list.
+ * @head: head of the list.
+ */
 void free_list(list_t *head)
 {
 	list_t *temp;
@@ -10,7 +13,7 @@ void free_list(list_t *head)
 	while (temp != NULL)
 	{
 		head = temp;
-		temp = head->next
+		temp = head->next;
 		free(head->str);
 		free(head);
 	}
