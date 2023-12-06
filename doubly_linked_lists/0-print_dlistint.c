@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * print_dlistint - prints elements of doubly linked list.
  * @dlistint_t - doubly linked list.
