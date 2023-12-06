@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * print_dlistint - prints elements of doubly linked list.
- * @dlistint_t - doubly linked list.
+ * @h - doubly linked list.
  * Return: count of elements.
  */
 size_t print_dlistint(const dlistint_t *h)
@@ -12,7 +12,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%d", h->n);
+		printf("%d\n", h->n);
 		h = h->next;
 		count++;
 	}
