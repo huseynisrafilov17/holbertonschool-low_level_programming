@@ -32,6 +32,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	else
 		return (-1);
+	free(current_node);
 	return (1);
 
 }
