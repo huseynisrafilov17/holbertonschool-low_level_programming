@@ -22,9 +22,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		count++;
 	}
 	if (idx == 0)
-		add_dnodeint(h, n);
+	{
+		free(new);
+		return (add_dnodeint(h, n));
+	}
 	else if (temp != NULL && count == idx && temp->next == NULL)
-		add_dnodeint_end(h, n);
+	{
+		free(new);
+		return (add_dnodeint_end(h, n));
+	}
 	else if (temp != NULL && count == idx)
 	{
 		store = temp->next;
