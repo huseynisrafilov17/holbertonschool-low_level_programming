@@ -20,9 +20,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(current_node);
 	else if (index == 0 && current_node != NULL)
 	{
-		current_node = current_node->next;
+		next_node = current_node->next;
 		current_node->prev = NULL;
-		free(*head);
+		free(current_node);
 	}
 	if (count == index && current_node != NULL && current_node->next == NULL)
 	{
