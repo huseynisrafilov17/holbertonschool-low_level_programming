@@ -5,7 +5,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int num, size = 0;
+	int num, size = 0, j;
 	unsigned long int i = 1;
 
 	if (n == 0)
@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		size++;
 		i *= 2;
 	}
-	for (i = size - 1; i >= 0; i--)
+	for (j = size - 1; j >= 0; j--)
 	{
 		num = n >> i;
 		_putchar((num & 1)+ '0');
