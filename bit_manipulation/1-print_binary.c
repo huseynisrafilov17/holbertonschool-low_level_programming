@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 		if (i * 2 <= ULONG_MAX)
 			i *= 2;
 		else
-			break
+			break;
 	}
 	for (j = size - 1; j >= 0; j--)
 	{
