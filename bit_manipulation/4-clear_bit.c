@@ -5,7 +5,7 @@
  * @index: index.
  * Return: 1 or -1.
  */
-int clear_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num = *n, num_to_remove = 1;
 	unsigned int size_ulong = sizeof(num) * 8, i = 0;
@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index);
 				num_to_remove *= 2;
 				i++;
 			}
-			num = num - num_to_remov;
+			num = num - num_to_remove;
 			*n = num;
 		}
 		return (1);
