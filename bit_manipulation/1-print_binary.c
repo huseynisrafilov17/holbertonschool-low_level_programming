@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	{
 		_putchar('0');
 	}
-	while (n / i != 0)
+	while (n > i)
 	{
 		size++;
 		i *= 2;
