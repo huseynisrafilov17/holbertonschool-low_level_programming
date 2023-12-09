@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_binary: prints number in binary
- * @n - number.
+ * print_binary - prints number in binary
+ * @n: number.
  */
 void print_binary(unsigned long int n)
 {
@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	{
 		_putchar('0');
 	}
-	while (n > i)
+	while (n >= i)
 	{
 		size++;
 		i *= 2;
@@ -20,6 +20,6 @@ void print_binary(unsigned long int n)
 	for (j = size - 1; j >= 0; j--)
 	{
 		num = n >> j;
-		_putchar((num & 1)+ '0');
+		_putchar((num & 1) + '0');
 	}
 }
