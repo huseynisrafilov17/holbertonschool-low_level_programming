@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * print_binary - prints number in binary
  * @n: number.
@@ -6,7 +7,7 @@
 void print_binary(unsigned long int n)
 {
 	int num, size = 0, j;
-	unsigned long long int i = 1;
+	unsigned long int i = 1;
 
 	if (n == 0)
 	{
@@ -15,7 +16,10 @@ void print_binary(unsigned long int n)
 	while (n >= i)
 	{
 		size++;
-		i *= 2;
+		if (i * 2 <= ULONG_MAX)
+			i *= 2;
+		else
+			break
 	}
 	for (j = size - 1; j >= 0; j--)
 	{
