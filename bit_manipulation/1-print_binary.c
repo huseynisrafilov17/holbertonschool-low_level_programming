@@ -5,11 +5,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 1;
+	int i = 1, num, size = 0;
 
-	for (; (n / i) / 2 != 0; i *= 2)
-		continue;
-	_putchar(n / i + 48);
-	for (; i >= 2; i /= 2)
-		_putchar(n % i + 48);
+	if (n == 0)
+	{
+		putchar('0');
+	}
+	while (n / i != 0)
+	{
+		size++;
+		i *= 2;
+	}
+	for (i = size - 1; i >= 0; i--)
+	{
+		num = n >> i;
+		putchar((num & 1)+ '0');
+	}
 }
