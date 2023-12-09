@@ -7,19 +7,9 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int size = 0, size_ulong = sizeof(n) * 8;
-	unsigned long int i = 1;
+	unsigned int size_ulong = sizeof(n) * 8;
 
-	if (n == 0 && index == 0)
-		return (0);
-	else if (n == 0 && index != 0)
-		return (-1);
-	while (n >= i && size_ulong > size)
-	{
-		size++;
-		i *= 2;
-	}
-	if (index <= size - 1)
+	if (index < size_ulong)
 		return ((n >> index) & 1);
 	else
 		return (-1);
