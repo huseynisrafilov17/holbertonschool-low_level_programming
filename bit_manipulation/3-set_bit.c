@@ -13,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (index < size_ulong)
 	{
-		if ((num >> index) & 1 == 0)
+		if (((num >> index) & 1) == 0)
 		{
 			num = num + pow(2, index);
 			*n = num;
