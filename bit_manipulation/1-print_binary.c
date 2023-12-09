@@ -15,7 +15,6 @@ void print_binary(unsigned long int n)
 	while (n >= i && size_ulong > size)
 	{
 		size++;
-		printf("anan\n");
 		i *= 2;
 	}
 	for (j = size - 1; j >= 0; j--)
