@@ -1,21 +1,25 @@
 #include "main.h"
-#include <math.h>
 /**
  * set_bit - sets bit to 1 at the given index.
- * @n: number.
+ * @n: number address.
  * @index: index.
  * Return: 1 or -1.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int size_ulong = sizeof(n) * 8;
-	unsigned long int num = *n;
+	unsigned long int num = *n, num_to_add = 1;
+	unsigned int size_ulong = sizeof(num) * 8, i = 0;
 
 	if (index < size_ulong)
 	{
 		if (((num >> index) & 1) == 0)
 		{
-			num = num + pow(2, index);
+			while (i != index)
+			{
+				num_to_add *= 2;
+				i++;
+			}
+			num = num + num_to_add;
 			*n = num;
 		}
 		return (1);
