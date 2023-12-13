@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
+#include <stdlib.h>
 /**
  * read_textfile - reads and prints what is in a file/
  * @filename: file name.
@@ -12,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int n, fd;
 	char *buff;
 
-	if (filename == NULL)
+	if (filename == NULL || filename == "")
 		return (0);
 	buff = malloc(letters * sizeof(char));
 	if (buff == NULL)
