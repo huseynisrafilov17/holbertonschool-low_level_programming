@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int n, fd;
 	char *buff;
 
-	if (filename == NULL || filename == "")
+	if (filename == NULL)
 		return (0);
 	buff = malloc(letters * sizeof(char));
 	if (buff == NULL)
