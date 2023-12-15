@@ -21,12 +21,12 @@ void needed(const char *filename, char *text_content)
 	close_val = close(fd);
 	if (fd == -1 || n == -1)
 	{
-		fprintf(stderr, "Error: Can't write to %s", filename);
+		dprintf(stderr, "Error: Can't write to %s", filename);
 		exit(99);
 	}
 	if (close_val == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d", fd);
+		dprintf(stderr, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 }
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		fprintf(stderr, "Error: Can't read from file %s", argv[1]);
+		dprintf(stderr, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
 	while (read(fd, buff, 1024) != -1)
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	close_val = close(fd);
 	if (close_val == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d", fd);
+		dprintf(stderr, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 	return (1);
