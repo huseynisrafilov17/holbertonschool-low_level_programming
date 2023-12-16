@@ -25,7 +25,7 @@ void needed(const char *filename, int fd, char *text_content)
 		}
 		else if (n == -1)
 			break;
-		i++
+		i++;
 	}
 	if (n == -1)
 	{
