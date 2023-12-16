@@ -22,6 +22,8 @@ void needed(const char *filename, int fd, char *text_content)
 			n = write(fd, text_content + i, 1);
 		else if (n == -1)
 			break;
+		else if (*(text_content + i) == '\0')
+			*(text_content + i) = 'e';
 		i++;
 	}
 	if (n == -1)
