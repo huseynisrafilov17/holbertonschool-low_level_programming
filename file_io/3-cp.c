@@ -11,21 +11,12 @@
  */
 void needed(const char *filename, int fd, char *text_content)
 {
-	int n, len, i = 0;
+	int n, len;
 
 	if (text_content == NULL)
 		text_content = "";
 	len = strlen(text_content);
-	while (i < len)
-	{
-		if (*(text_content + i) != '\0' && n != -1)
-			n = write(fd, text_content + i, 1);
-		else if (n == -1)
-			break;
-		else if (*(text_content + i) == '\0')
-			*(text_content + i) = 'e';
-		i++;
-	}
+	n = write(fd, text_content + i, 1);
 	if (n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
@@ -40,7 +31,7 @@ void needed(const char *filename, int fd, char *text_content)
  */
 int main(int argc, char *argv[])
 {
-	int fd, fd1, close_val, close_val1, re;
+	int fd, fd1, close_val, close_val1, re, i = 0;
 	char buff[1025];
 
 	if (argc != 3)
@@ -64,6 +55,13 @@ int main(int argc, char *argv[])
 	while (re != 0)
 	{
 		buff[re] = '\0';
+		i = 0;
+		while (i < re)
+		{
+			if (buff[i] == '\0')
+				buff[i] == 7;
+			i++;
+		}
 		needed(argv[2], fd1, buff);
 		re = read(fd, buff, 1024);
 	}
