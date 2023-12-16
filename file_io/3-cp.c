@@ -11,7 +11,7 @@
  */
 void needed(const char *filename, int fd, char *text_content)
 {
-	int n, len, close_val;
+	int n, len;
 
 	if (text_content == NULL)
 		text_content = "";
