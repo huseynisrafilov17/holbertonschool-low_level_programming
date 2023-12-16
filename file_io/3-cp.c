@@ -9,9 +9,9 @@
  * @filename: file name.
  * @text_content: text content.
  */
-void needed(const char *filename, int fd, char *text_content)
+void needed(const char *filename, int fd, char *text_content, int len)
 {
-	int n, len;
+	int n;
 
 	if (text_content == NULL)
 		text_content = "";
@@ -31,7 +31,7 @@ void needed(const char *filename, int fd, char *text_content)
  */
 int main(int argc, char *argv[])
 {
-	int fd, fd1, close_val, close_val1, re, i = 0;
+	int fd, fd1, close_val, close_val1, re;
 	char buff[1025];
 
 	if (argc != 3)
@@ -55,14 +55,7 @@ int main(int argc, char *argv[])
 	while (re != 0)
 	{
 		buff[re] = '\0';
-		i = 0;
-		while (i < re)
-		{
-			if (buff[i] == '\0')
-				buff[i] == 223;
-			i++;
-		}
-		needed(argv[2], fd1, buff);
+		needed(argv[2], fd1, buff, re);
 		re = read(fd, buff, 1024);
 	}
 	close_val = close(fd);
