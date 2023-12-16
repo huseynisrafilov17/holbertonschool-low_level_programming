@@ -38,19 +38,23 @@ void needed(const char *filename, char *text_content)
  */
 int main(int argc, char *argv[])
 {
-	int fd, close_val;
+	int fd, close_val, re;
 	char buff[1024];
 
 	if (argc != 3)
 		exit(97);
 	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	re = read(fd, buff, 1024);
+	if (fd == -1 || re == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	while (read(fd, buff, 1024) != -1)
+	while (re != -1)
+	{
 		needed(argv[2], buff);
+		re = read(fd, buff, 1024);
+	}
 	close_val = close(fd);
 	if (close_val == -1)
 	{
