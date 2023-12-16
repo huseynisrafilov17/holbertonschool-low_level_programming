@@ -15,7 +15,6 @@ void needed(const char *filename, int fd, char *text_content, int len)
 
 	if (text_content == NULL)
 		text_content = "";
-	len = strlen(text_content);
 	n = write(fd, text_content, len);
 	if (n == -1)
 	{
