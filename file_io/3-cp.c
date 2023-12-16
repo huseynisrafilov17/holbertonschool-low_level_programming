@@ -8,6 +8,8 @@
  * needed - creates a file and writes into it.
  * @filename: file name.
  * @text_content: text content.
+ * @fd: file descriptor.
+ * @len: length.
  */
 void needed(const char *filename, int fd, char *text_content, int len)
 {
