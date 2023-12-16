@@ -18,7 +18,7 @@ void needed(const char *filename, int fd, char *text_content)
 	len = strlen(text_content);
 	while (i < len)
 	{
-		if (n != -1)
+		if (text_content + i != '\0' && n != -1)
 			n = write(fd, text_content + i, 1);
 		else if (n == -1)
 			break;
