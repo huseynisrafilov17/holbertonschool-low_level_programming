@@ -17,11 +17,16 @@ void needed(const char *filename, int fd, char *text_content)
 		text_content = "";
 	len = strlen(text_content);
 	while (i < len)
+	{
 		if (text_content[i] != '\0' && n != -1)
 		{
 			n = write(fd, text_content, 1);
 			text_content++;
 		}
+		else if (n == -1)
+			break;
+		i++
+	}
 	if (n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
