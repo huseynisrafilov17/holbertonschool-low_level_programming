@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		while (i < re)
 		{
 			if (buff[i] == '\0')
-				buff[i] == 255;
+				buff[i] == 223;
 			i++;
 		}
 		needed(argv[2], fd1, buff);
