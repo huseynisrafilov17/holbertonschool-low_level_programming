@@ -11,12 +11,14 @@
  */
 void needed(const char *filename, int fd, char *text_content)
 {
-	int n, len;
+	int n, len, i = 0;
 
 	if (text_content == NULL)
 		text_content = "";
 	len = strlen(text_content);
-	n = write(fd, text_content, len);
+	while (i < len)
+		if (text_content[i] != '\0' && n != -1)
+			n = write(fd, text_content[i], 1);
 	if (n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
