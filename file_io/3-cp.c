@@ -16,7 +16,7 @@ void needed(const char *filename, int fd, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 	len = strlen(text_content);
-	n = write(fd, text_content + i, 1);
+	n = write(fd, text_content, len);
 	if (n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
