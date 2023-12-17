@@ -26,15 +26,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		current_node = array[index];
-		while (check_node->next != NULL)
+		while (current_node->next != NULL)
 		{
-			if (check_node->key == (char *)key)
+			if (current_node->key == (char *)key)
 			{
-				check_node->value = (char *)value;
-				check_true = 0;
+				current_node->value = (char *)value;
+				current_node = 0;
 				break;
 			}
-			check_node = check_node->next;
+			current_node = current_node->next;
 		}
 		if (check_true)
 		{
