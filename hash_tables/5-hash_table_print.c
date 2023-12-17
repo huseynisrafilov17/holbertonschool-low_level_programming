@@ -28,8 +28,8 @@ void hash_table_print(const hash_table_t *ht)
 			current_node = current_node->next;
 		}
 		i++;
-		if (i != size && array[i] != NULL)
+		if (i != 0 && i != size && array[i] != NULL)
 			printf(", ");
 	}
-	printf("}");
+	printf("}\n");
 }
