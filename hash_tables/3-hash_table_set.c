@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current_node->key, (char *)key) == 0)
 		{
-			strcpy(current_node->value, (char *)value);
+			current_node->value = strdup((char *)value);
 			return (1);
 		}
 		current_node = current_node->next;
@@ -30,8 +30,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-	strcpy(new_node->key, (char *)key);
-	strcpy(new_node->value, (char *)value);
+	new_node->key = strdup((char *)key);
+	new_node->value = strdup((char *)value);
 	if (!(array[index]))
 	{
 		new_node->next = NULL;
