@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index, size = ht->size;
-	hash_node_t **array = ht->array, *new_node, *current_node, check_node;
+	hash_node_t **array = ht->array, *new_node, *current_node, *check_node;
 
 	index = key_index((unsigned char *)key, size);
 	new_node = malloc(sizeof(hash_node_t));
