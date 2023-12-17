@@ -20,13 +20,16 @@ void hash_table_print(const hash_table_t *ht)
 	while (i < size)
 	{
 		current_node = array[i];
-		while (!(current_node))
+		while (current_node != NULL)
 		{
 			printf("'%s': '%s'", current_node->key, current_node->value);
-			if (!(i == size - 1 && current_node->next == NULL))
+			if (current_node->next != NULL)
 				printf(", ");
 			current_node = current_node->next;
 		}
+		i++;
+		if (i != size && array[i] != NULL)
+			printf(", ");
 	}
 	printf("}");
 }
