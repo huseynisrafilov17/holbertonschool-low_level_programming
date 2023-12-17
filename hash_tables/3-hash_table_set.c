@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (current_node->key == (char *)key)
 			{
 				current_node->value = (char *)value;
-				current_node = 0;
+				check_true = 0;
 				break;
 			}
 			current_node = current_node->next;
