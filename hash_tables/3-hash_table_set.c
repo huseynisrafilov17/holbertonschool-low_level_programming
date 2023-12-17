@@ -9,8 +9,8 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index;
-	hash_node_t **array, *new_node, *current_node, *check_node;
+	int index, check_true = 1;
+	hash_node_t **array, *new_node, *current_node;
 
 	if (ht == NULL)
 		return (0);
@@ -25,16 +25,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_node->next = NULL;
 	else
 	{
-		check_node = array[index];
+		current_node = array[index];
 		while (check_node->next != NULL)
 		{
 			if (check_node->key == (char *)key)
+			{
 				check_node->value = (char *)value;
+				check_true = 0;
+				break;
+			}
 			check_node = check_node->next;
 		}
-		current_node = array[index];
-		new_node->next = current_node;
-		array[index] = new_node;
+		if (check_true)
+		{
+			current_node = array[index];
+			new_node->next = current_node;
+		}
 	}
 	array[index] = new_node;
 	return (1);
