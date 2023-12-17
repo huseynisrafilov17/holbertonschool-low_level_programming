@@ -10,7 +10,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index, check_true = 1;
+	int index;
 	hash_node_t **array, *new_node, *current_node;
 
 	if (ht == NULL)
@@ -23,7 +23,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(current_node->key, (char *)key) == 0)
 		{
 			current_node->value = strdup((char *)value);
-			check_true = 0;
 			return (1);
 		}
 		current_node = current_node->next;
