@@ -22,7 +22,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = (char *)key;
 	new_node->value = (char *)value;
 	if (!(array[index]))
+	{
 		new_node->next = NULL;
+		array[index] = new_node;
+	}
 	else
 	{
 		current_node = array[index];
@@ -40,8 +43,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			current_node = array[index];
 			new_node->next = current_node;
+			array[index] = new_node;
 		}
 	}
-	array[index] = new_node;
 	return (1);
 }
